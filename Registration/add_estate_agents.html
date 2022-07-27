@@ -1,0 +1,1707 @@
+<!-- Ownsoft Technologies (PVT) Ltd. -->
+<!-- This is for Construction Management System V-1.0 -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>OST Construction</title>
+    <!-- CSS files -->
+    <link href="../static/css/ost_const.min.css" rel="stylesheet" />
+    <link href="./static/css/ost_const.css" rel="stylesheet" />
+    <link href="./static/css/ost_const-flags.min.css" rel="stylesheet" />
+    <link href="./static/css/ost_const-payments.min.css" rel="stylesheet" />
+    <link href="./static/css/ost_const-vendors.min.css" rel="stylesheet" />
+    <link href="./static/css/demo.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="page">
+
+        <div class="sticky-top">
+            <!-- Header -->
+            <header class="navbar navbar-expand-md navbar-light sticky-top d-print-none">
+                <div class="container-xl">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbar-menu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+                        <a href="">
+                            <img src="./static/logo.svg" width="110" height="32" alt="OST Construction"
+                                class="navbar-brand-image">
+                        </a>
+                    </h1>
+
+                    <div class="navbar-nav flex-row order-md-last">
+                        <!-- Theme changer -->
+                        <div class="d-none d-md-flex">
+                            <a href="?theme=dark" class="nav-link px-0 hide-theme-dark" title="Enable dark mode"
+                                data-bs-toggle="tooltip" data-bs-placement="bottom">
+                                <!-- Download SVG icon from http://tabler-icons.io/i/moon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path
+                                        d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+                                </svg>
+                            </a>
+                            <a href="?theme=light" class="nav-link px-0 hide-theme-light" title="Enable light mode"
+                                data-bs-toggle="tooltip" data-bs-placement="bottom">
+                                <!-- Download SVG icon from http://tabler-icons.io/i/sun -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <circle cx="12" cy="12" r="4" />
+                                    <path
+                                        d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <!-- Profile -->
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown"
+                                aria-label="Open user menu">
+                                <span class="avatar avatar-sm"
+                                    style="background-image: url(./static/avatars/000m.jpg)"></span>
+                                <div class="d-none d-xl-block ps-2">
+                                    <div>Sami Shah</div>
+                                    <div class="mt-1 small text-muted">Quetta</div>
+                                </div>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                <a href="#" class="dropdown-item">Profile & account</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item">Settings</a>
+                                <a href="#" class="dropdown-item">Logout</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </header>
+
+            <!-- Navbar -->
+            <div class="navbar-expand-md">
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <div class="navbar navbar-light">
+                        <div class="container-2xl">
+
+                            <ul class="navbar-nav fs-3">
+                                <!-- DASHBOARD -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">
+                                        <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                            <!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <polyline points="5 12 3 12 12 3 21 12 19 12" />
+                                                <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                                                <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                                            </svg>
+                                        </span>
+                                        <span class="nav-link-title">
+                                            Home
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <!-- REGISTRATION -->
+                                <li class="nav-item dropdown active">
+                                    <a class="nav-link dropdown-toggle" href="#registration" data-bs-toggle="dropdown"
+                                        data-bs-auto-close="outside" role="button" aria-expanded="false">
+                                        <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <rect x="4" y="4" width="6" height="6" rx="1"></rect>
+                                                <rect x="4" y="14" width="6" height="6" rx="1"></rect>
+                                                <rect x="14" y="14" width="6" height="6" rx="1"></rect>
+                                                <line x1="14" y1="7" x2="20" y2="7"></line>
+                                                <line x1="17" y1="4" x2="17" y2="10"></line>
+                                            </svg>
+                                        </span>
+                                        <span class="nav-link-title">
+                                            Registration
+                                        </span>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <!-- <div class="dropdown-menu-columns"> -->
+                                        <!-- <div class="dropdown-menu-column"> -->
+
+                                        <!-- Customers -->
+                                        <div class="dropend">
+                                            <a href="" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                                                data-bs-auto-close="outside" role="button" aria-expanded="false">
+                                                Customers
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a href="manage_customers.html" class="dropdown-item">
+                                                    Manage Customers
+                                                </a>
+                                                <a href="add_customers.html" class="dropdown-item">
+                                                    Add Customers
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Vendors -->
+                                        <div class="dropend">
+                                            <a class="dropdown-item dropdown-toggle" href="#vendors"
+                                                data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                                                aria-expanded="false">
+                                                Vendors
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a href="manage_vendor.html" class="dropdown-item">
+                                                    Manage Vendors
+                                                </a>
+                                                <a href="add_vendor.html" class="dropdown-item">
+                                                    Add Vendors
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Estate Agents -->
+                                        <div class="dropend">
+                                            <a class="dropdown-item dropdown-toggle" href="#estate-agents"
+                                                data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                                                aria-expanded="false">
+                                                Estate Agents
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a href="manage_estate_agents.html" class="dropdown-item">
+                                                    Manage Estate Agents
+                                                </a>
+                                                <a href="add_estate_agents.html" class="dropdown-item active">
+                                                    Add Estate Agents
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Product Types -->
+                                        <div class="dropend">
+                                            <a class="dropdown-item dropdown-toggle" href="#product-types"
+                                                data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                                                aria-expanded="false">
+                                                Product Types
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a href="manage_product_types.html" class="dropdown-item">
+                                                    Manage Product Types
+                                                </a>
+                                                <a href="add_product_types.html" class="dropdown-item">
+                                                    Add Product Types
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Products -->
+                                        <div class="dropend">
+                                            <a class="dropdown-item dropdown-toggle" href="#products"
+                                                data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                                                aria-expanded="false">
+                                                Products
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a href="manage_products.html" class="dropdown-item">
+                                                    Manage Products
+                                                </a>
+                                                <a href="add_products.html" class="dropdown-item">
+                                                    Add Products
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Taxes -->
+                                        <div class="dropend">
+                                            <a class="dropdown-item dropdown-toggle" href="#taxes"
+                                                data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                                                aria-expanded="false">
+                                                Taxes
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a href="manage_taxes.html" class="dropdown-item">
+                                                    Manage Taxes
+                                                </a>
+                                                <a href="add_taxes.html" class="dropdown-item">
+                                                    Add Taxes
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Bank Accounts -->
+                                        <div class="dropend">
+                                            <a class="dropdown-item dropdown-toggle" href="#bank-accounts"
+                                                data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                                                aria-expanded="false">
+                                                Bank Accounts
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a href="manage_bank_accounts.html" class="dropdown-item">
+                                                    Manage Bank Accounts
+                                                </a>
+                                                <a href="add_bank_accounts.html" class="dropdown-item">
+                                                    Add Bank Accounts
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Assets -->
+                                        <div class="dropend">
+                                            <a class="dropdown-item dropdown-toggle" href="#assets"
+                                                data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                                                aria-expanded="false">
+                                                Assets
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a href="manage_assets.html" class="dropdown-item">
+                                                    Manage Assets
+                                                </a>
+                                                <a href="add_assets.html" class="dropdown-item">
+                                                    Add Assets
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Users -->
+                                        <div class="dropend">
+                                            <a class="dropdown-item dropdown-toggle" href="#users"
+                                                data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                                                aria-expanded="false">
+                                                Users
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a href="manage_users.html" class="dropdown-item">
+                                                    Manage Users
+                                                </a>
+                                                <a href="add_users.html" class="dropdown-item">
+                                                    Add Users
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Expense Types -->
+                                        <div class="dropend">
+                                            <a class="dropdown-item dropdown-toggle" href="#expense-types"
+                                                data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                                                aria-expanded="false">
+                                                Expense Types
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a href="manage_expense_types.html" class="dropdown-item">
+                                                    Manage Expense Types
+                                                </a>
+                                                <a href="add_expense_types.html" class="dropdown-item">
+                                                    Add Expense Types
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Warehouses -->
+                                        <div class="dropend">
+                                            <a class="dropdown-item dropdown-toggle" href="#warehouses"
+                                                data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                                                aria-expanded="false">
+                                                Warehouses
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a href="manage_warehouses.html" class="dropdown-item">
+                                                    Manage Warehouses
+                                                </a>
+                                                <a href="add_warehouses.html" class="dropdown-item">
+                                                    Add Warehouses
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!-- </div> -->
+                                        <!-- </div> -->
+                                    </div>
+                                </li>
+
+                                <!-- ACCOUNTS -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#accounts" data-bs-toggle="dropdown"
+                                        data-bs-auto-close="outside" role="button" aria-expanded="false">
+                                        <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="icon icon-tabler icon-tabler-file-invoice" width="24" height="24"
+                                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                                stroke-linecap="round" stroke-linejoin="round">
+
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                                                <path
+                                                    d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z">
+                                                </path>
+                                                <line x1="9" y1="7" x2="10" y2="7"></line>
+                                                <line x1="9" y1="13" x2="15" y2="13"></line>
+                                                <line x1="13" y1="17" x2="15" y2="17"></line>
+                                            </svg>
+                                        </span>
+                                        <span class="nav-link-title">
+                                            Accounts
+                                        </span>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-menu-columns">
+                                            <div class="dropdown-menu-column">
+
+                                                <!-- Payment Vouchers -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#payment-vouchers"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Payment Vouchers
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Accounts/manage_pay_vouch.html"
+                                                            class="dropdown-item">
+                                                            Manage Payments
+                                                        </a>
+                                                        <a href="../Accounts/add_payment_voucher.html"
+                                                            class="dropdown-item">
+                                                            Add Payment Vouchers
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Expense Vouchers -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#expense-vouchers"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Expense Vouchers
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Accounts/manage_exp_vouch.html"
+                                                            class="dropdown-item">
+                                                            Manage Expense Vouchers
+                                                        </a>
+                                                        <a href="../Accounts/add_expense_voucher.html"
+                                                            class="dropdown-item">
+                                                            Add Expense Vouchers
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Receipt Vouchers -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#receipt-vouchers"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Receipt Vouchers
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Accounts/manage_receipt_vouch.html"
+                                                            class="dropdown-item">
+                                                            Manage Receipt Vouchers
+                                                        </a>
+                                                        <a href="../Accounts/add_receipt_voucher.html"
+                                                            class="dropdown-item">
+                                                            Add Receipt Vouchers
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Opening Vouchers -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#opening-vouchers"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Opening Vouchers
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Accounts/manage_opening_voucher.html"
+                                                            class="dropdown-item">
+                                                            Manage Opening Vouchers
+                                                        </a>
+                                                        <a href="../Accounts/add_opening_voucher.html"
+                                                            class="dropdown-item">
+                                                            Add Opening Vouchers
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Journel Vouchers -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#journel-vouchers"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Journel Vouchers
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Accounts/manage_journel_voucher.html"
+                                                            class="dropdown-item">
+                                                            Manage Journel Vouchers
+                                                        </a>
+                                                        <a href="../Accounts/add_journel_voucher.html"
+                                                            class="dropdown-item">
+                                                            Add Journel Vouchers
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Debit Notes -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#debit-notes"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Debit Notes
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Accounts/manage_debit_notes.html"
+                                                            class="dropdown-item">
+                                                            Manage Debit Notes
+                                                        </a>
+                                                        <a href="../Accounts/add_debit_notes.html"
+                                                            class="dropdown-item">
+                                                            Add Debit Notes
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Bank Deposits -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#bank-deposits"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Bank Deposits
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Accounts/manage_bank_deposit_vouch.html"
+                                                            class="dropdown-item">
+                                                            Manage Bank Deposits
+                                                        </a>
+                                                        <a href="../Accounts/add_bank_deposit_voucher.html"
+                                                            class="dropdown-item">
+                                                            Add Bank Deposits
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Chart of Accounts -->
+                                                <a class="dropdown-item" href="../Accounts/chart_of_accounts.html">
+                                                    Chart of Accounts
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- SALES -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#sales" data-bs-toggle="dropdown"
+                                        data-bs-auto-close="outside" role="button" aria-expanded="false">
+                                        <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path
+                                                    d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2">
+                                                </path>
+                                                <rect x="9" y="3" width="6" height="4" rx="2"></rect>
+                                                <path d="M9 17v-5"></path>
+                                                <path d="M12 17v-1"></path>
+                                                <path d="M15 17v-3"></path>
+                                            </svg>
+                                        </span>
+                                        <span class="nav-link-title">
+                                            Sales
+                                        </span>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-menu-columns">
+                                            <div class="dropdown-menu-column">
+
+                                                <!-- Properties -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#properties"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Properties
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Sales/manage_properties.html" class="dropdown-item">
+                                                            Manage Properties
+                                                        </a>
+                                                        <a href="../Sales/generate_properties.html"
+                                                            class="dropdown-item">
+                                                            Generate Properties
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Property Sales -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#property-sales"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Property Sales
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Sales/manage_property_sales.html"
+                                                            class="dropdown-item">
+                                                            Manage Property Sales
+                                                        </a>
+                                                        <a href="../Sales/add_property_sale.html" class="dropdown-item">
+                                                            Add Property Sales
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Agent Commissions -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#agent-commissions"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Agent Commissions
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Sales/manage_agent_commission.html"
+                                                            class="dropdown-item">
+                                                            Manage Agent Commissions
+                                                        </a>
+                                                        <a href="../Sales/add_agent_commission.html"
+                                                            class="dropdown-item">
+                                                            Add Agent Commissions
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Installment Plans -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#installment-plans"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Installment Plans
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Sales/manage_installment_plans.html"
+                                                            class="dropdown-item">
+                                                            Manage Installment Plans
+                                                        </a>
+                                                        <a href="../Sales/add_installment_plan.html"
+                                                            class="dropdown-item">
+                                                            Add Installment Plans
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Installment Plans (Type B) -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle"
+                                                        href="#installment-plan-type-B" data-bs-toggle="dropdown"
+                                                        data-bs-auto-close="outside" role="button"
+                                                        aria-expanded="false">
+                                                        Installment Plans (Type B)
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Sales/manage_installment_plans_B.html"
+                                                            class="dropdown-item">
+                                                            Manage Installment Plans (Type B)
+                                                        </a>
+                                                        <a href="../Sales/add_installment_plan_B.html"
+                                                            class="dropdown-item">
+                                                            Add Installment Plans (Type B)
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Buy Backs -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#buy-backs"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Buy Backs
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Sales/manage_property_buy_back.html"
+                                                            class="dropdown-item">
+                                                            Manage Buy Backs
+                                                        </a>
+                                                        <a href="../Sales/add_property_buy_back.html"
+                                                            class="dropdown-item">
+                                                            Add Buy Backs
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Property Transfers -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#property-transfers"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Property Transfers
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Sales/manage_property_transfer.html"
+                                                            class="dropdown-item">
+                                                            Manage Property Transfers
+                                                        </a>
+                                                        <a href="../Sales/add_property_transfer.html"
+                                                            class="dropdown-item">
+                                                            Add Property Transfers
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Property Mergers -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#property-mergers"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Property Mergers
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Sales/manage_property_mergers.html"
+                                                            class="dropdown-item">
+                                                            Manage Property Mergers
+                                                        </a>
+                                                        <a href="../Sales/add_property_merger.html"
+                                                            class="dropdown-item">
+                                                            Add Property Mergers
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Property Cancellations -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle"
+                                                        href="#property-cancellations" data-bs-toggle="dropdown"
+                                                        data-bs-auto-close="outside" role="button"
+                                                        aria-expanded="false">
+                                                        Property Cancellations
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Sales/manage_property_cancellations.html"
+                                                            class="dropdown-item">
+                                                            Manage Property Cancellations
+                                                        </a>
+                                                        <a href="../Sales/add_property_cancellation.html"
+                                                            class="dropdown-item">
+                                                            Add Property Cancellations
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Additional Charges -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#additional-charges"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Additional Charges
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Sales/manage_additional_charges.html"
+                                                            class="dropdown-item">
+                                                            Manage Additional Charges
+                                                        </a>
+                                                        <a href="../Sales/add_additional_charges.html"
+                                                            class="dropdown-item">
+                                                            Add Additional Charges
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Property Subcharges -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#property-surcharges"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Property Surcharges
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Sales/manage_property_surcharge.html"
+                                                            class="dropdown-item">
+                                                            Manage Property Surcharges
+                                                        </a>
+                                                        <a href="../Sales/add_property_surcharge.html"
+                                                            class="dropdown-item">
+                                                            Add Property Surcharges
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Surcharge Waivers -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#surcharge-waivers"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Surcharge Waivers
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Sales/manage_surcharge_waiver.html"
+                                                            class="dropdown-item">
+                                                            Manage Surcharge Waivers
+                                                        </a>
+                                                        <a href="../Sales/add_surcharge_waiver.html"
+                                                            class="dropdown-item">
+                                                            Add Surcharge Waivers
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Upgrade Property Prices -->
+                                                <a class="dropdown-item" href="../Sales/upgrade_property_prices.html">
+                                                    Upgrade Property Prices
+                                                </a>
+
+                                                <!-- Master Delete -->
+                                                <a class="dropdown-item"
+                                                    href="../Sales/master_delete_property_sales.html">
+                                                    Master Delete
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- PURCHASES -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#purchases" data-bs-toggle="dropdown"
+                                        data-bs-auto-close="outside" role="button" aria-expanded="false">
+                                        <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                                stroke-linecap="round" stroke-linejoin="round">
+
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <circle cx="6" cy="19" r="2"></circle>
+                                                <circle cx="17" cy="19" r="2"></circle>
+                                                <path d="M17 17h-11v-14h-2"></path>
+                                                <path d="M6 5l6.005 .429m7.138 6.573l-.143 .998h-13"></path>
+                                                <path d="M15 6h6m-3 -3v6"></path>
+                                            </svg>
+                                        </span>
+                                        <span class="nav-link-title">
+                                            Purchases
+                                        </span>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-menu-columns">
+                                            <div class="dropdown-menu-column">
+
+                                                <!-- Purchase Orders -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#purchase-orders"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Purchase Orders
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Purchases/manage_purchase_orders.html"
+                                                            class="dropdown-item">
+                                                            Manage Purchase Orders
+                                                        </a>
+                                                        <a href="../Purchases/add_purchases_order.html"
+                                                            class="dropdown-item">
+                                                            Add Purchase Orders
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- PO Cancellations -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle"
+                                                        href="#purchase-order-cancellations" data-bs-toggle="dropdown"
+                                                        data-bs-auto-close="outside" role="button"
+                                                        aria-expanded="false">
+                                                        PO Cancellations
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Purchases/manage_purchase_order_cancel.html"
+                                                            class="dropdown-item">
+                                                            Manage PO Cancellations
+                                                        </a>
+                                                        <a href="../Purchases/add_purchase_order_cancel.html"
+                                                            class="dropdown-item">
+                                                            Add PO Cancellations
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Stock Vouchers -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#stock-vouchers"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Stock Vouchers
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Purchases/manage_stock_vouchers.html"
+                                                            class="dropdown-item">
+                                                            Manage Stock Vouchers
+                                                        </a>
+                                                        <a href="../Purchases/add_stock_receiving_voucher.html"
+                                                            class="dropdown-item">
+                                                            Add Stock Vouchers
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Purchase Returns -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#purchase-returns"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Purchase Returns
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Purchases/manage_purchase_returns.html"
+                                                            class="dropdown-item">
+                                                            Manage Purchase Returns
+                                                        </a>
+                                                        <a href="../Purchases/add_purchase_return.html"
+                                                            class="dropdown-item">
+                                                            Add Purchase Returns
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Inventory Out Vouchers -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle"
+                                                        href="#inventory-out-vouchers" data-bs-toggle="dropdown"
+                                                        data-bs-auto-close="outside" role="button"
+                                                        aria-expanded="false">
+                                                        Inventory Out Vouchers
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Purchases/manage_inventory_out_voucher.html"
+                                                            class="dropdown-item">
+                                                            Manage Inventory Out Vouchers
+                                                        </a>
+                                                        <a href="../Purchases/add_inventory_out_voucher.html"
+                                                            class="dropdown-item">
+                                                            Add Inventory Out Vouchers
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Requisition Orders -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#requisition-orders"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Requisition Orders
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Purchases/manage_requisition_order.html"
+                                                            class="dropdown-item">
+                                                            Manage Requisition Orders
+                                                        </a>
+                                                        <a href="../Purchases/add_requisition_order.html"
+                                                            class="dropdown-item">
+                                                            Add Requisition Orders
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Requisition Approvels -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle"
+                                                        href="#requisition-approvels" data-bs-toggle="dropdown"
+                                                        data-bs-auto-close="outside" role="button"
+                                                        aria-expanded="false">
+                                                        Requisition Approvels
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Purchases/manage_requisition_approval.html"
+                                                            class="dropdown-item">
+                                                            Manage Requisition Approvels
+                                                        </a>
+                                                        <a href="../Purchases/add_requisition_approval.html"
+                                                            class="dropdown-item">
+                                                            Add Requisition Approvels
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Requisition Approvel Action List -->
+                                                <a class="dropdown-item"
+                                                    href="../Purchases/requisition_approval_action_list.html">
+                                                    Requisition Approvel Action List
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- CONSTRUCTION -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#construction" data-bs-toggle="dropdown"
+                                        data-bs-auto-close="outside" role="button" aria-expanded="false">
+                                        <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                                stroke-linecap="round" stroke-linejoin="round">
+
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <circle cx="4" cy="17" r="2"></circle>
+                                                <circle cx="13" cy="17" r="2"></circle>
+                                                <line x1="13" y1="19" x2="4" y2="19"></line>
+                                                <line x1="4" y1="15" x2="13" y2="15"></line>
+                                                <path d="M8 12v-5h2a3 3 0 0 1 3 3v5"></path>
+                                                <path d="M5 15v-2a1 1 0 0 1 1 -1h7"></path>
+                                                <path d="M21.12 9.88l-3.12 -4.88l-5 5"></path>
+                                                <path
+                                                    d="M21.12 9.88a3 3 0 0 1 -2.12 5.12a3 3 0 0 1 -2.12 -.88l4.24 -4.24z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class="nav-link-title">
+                                            Construction
+                                        </span>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-menu-columns">
+                                            <div class="dropdown-menu-column">
+
+                                                <!-- Construction Notes -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#construction-notes"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Construction Notes
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Construction/manage_construction_note.html"
+                                                            class="dropdown-item">
+                                                            Manage Construction Notes
+                                                        </a>
+                                                        <a href="../Construction/add_construction_note.html"
+                                                            class="dropdown-item">
+                                                            Add Construction Notes
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Construction stage chart -->
+                                                <a class="dropdown-item"
+                                                    href="../Construction/construction_stage_chart.html">
+                                                    Construction Stage Chart
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- HR -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#hr" data-bs-toggle="dropdown"
+                                        data-bs-auto-close="outside" role="button" aria-expanded="false">
+                                        <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                                stroke-linecap="round" stroke-linejoin="round">
+
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <line x1="6" y1="9" x2="12" y2="9"></line>
+                                                <line x1="4" y1="5" x2="8" y2="5"></line>
+                                                <path d="M6 5v11a1 1 0 0 0 1 1h5"></path>
+                                                <rect x="12" y="7" width="8" height="4" rx="1"></rect>
+                                                <rect x="12" y="15" width="8" height="4" rx="1"></rect>
+                                            </svg>
+                                        </span>
+                                        <span class="nav-link-title">
+                                            HR
+                                        </span>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-menu-columns">
+                                            <div class="dropdown-menu-column">
+
+                                                <!-- Employees -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#employees"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Employees
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../HR/manage_employee.html" class="dropdown-item">
+                                                            Manage Employees
+                                                        </a>
+                                                        <a href="../HR/add_employee.html" class="dropdown-item">
+                                                            Add Employees
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Salary Slips -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#salary-slips"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Salary Slips
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../HR/manage_salary_slips.html" class="dropdown-item">
+                                                            Manage Salary Slips
+                                                        </a>
+                                                        <a href="../HR/add_salary_slip.html" class="dropdown-item">
+                                                            Add Salary Slips
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Employee Attendance -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#employee-attendance"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Employee Attendance
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../HR/manage_employee_attendance.html"
+                                                            class="dropdown-item">
+                                                            Manage Employee Attendance
+                                                        </a>
+                                                        <a href="../HR/add_employee_attendance.html"
+                                                            class="dropdown-item">
+                                                            Add Employee Attendance
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Salary Structures -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#salary-structures"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Salary Structures
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../HR/manage_salary_structure.html"
+                                                            class="dropdown-item">
+                                                            Manage Salary Structures
+                                                        </a>
+                                                        <a href="../HR/add_salary_structure.html" class="dropdown-item">
+                                                            Add Salary Structures
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Salary Heads -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#salary-heads"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Salary Heads
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../HR/manage_salary_head.html" class="dropdown-item">
+                                                            Manage Salary Heads
+                                                        </a>
+                                                        <a href="../HR/add_salary_head.html" class="dropdown-item">
+                                                            Add Salary Heads
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Loan Disbursements -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#loan-disbursements"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Loan Disbursements
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../HR/manage_loan_disbursement.html"
+                                                            class="dropdown-item">
+                                                            Manage Loan Disbursements
+                                                        </a>
+                                                        <a href="../HR/add_employee_loan_disbursement_voucher.html"
+                                                            class="dropdown-item">
+                                                            Add Loan Disbursements
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Loan Receipts -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#loan-receipts"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Loan Receipts
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../HR/manage_loan_receipt.html" class="dropdown-item">
+                                                            Manage Loan Receipts
+                                                        </a>
+                                                        <a href="../HR/add_employee_loan_payment_receipt.html"
+                                                            class="dropdown-item">
+                                                            Add Loan Receipts
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Generate Payroll -->
+                                                <a class="dropdown-item" href="../HR/generate_pay_roll.html">
+                                                    Generate Payroll
+                                                </a>
+
+                                                <!-- Employee Notes -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#employee-notes"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Employee Notes
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../HR/manage_employee_note.html" class="dropdown-item">
+                                                            Manage Employee Notes
+                                                        </a>
+                                                        <a href="../HR/add_employee_note.html" class="dropdown-item">
+                                                            Add Employee Notes
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- REPORTS -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#reports" data-bs-toggle="dropdown"
+                                        data-bs-auto-close="outside" role="button" aria-expanded="false">
+                                        <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M8 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h5.697"></path>
+                                                <path d="M18 14v4h4"></path>
+                                                <path d="M18 11v-4a2 2 0 0 0 -2 -2h-2"></path>
+                                                <rect x="8" y="3" width="6" height="4" rx="2"></rect>
+                                                <circle cx="18" cy="18" r="4"></circle>
+                                                <path d="M8 11h4"></path>
+                                                <path d="M8 15h3"></path>
+                                            </svg>
+                                        </span>
+                                        <span class="nav-link-title">
+                                            Reports
+                                        </span>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-menu-columns">
+                                            <div class="dropdown-menu-column">
+
+                                                <!-- Accounts -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#accounts"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Accounts
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Reports/general_ledger.html" class="dropdown-item">
+                                                            General Ledger
+                                                        </a>
+                                                        <a href="../Reports/customer_ledger.html" class="dropdown-item">
+                                                            Customer Ledger
+                                                        </a>
+                                                        <a href="../Reports/estate_agent_ledger.html"
+                                                            class="dropdown-item">
+                                                            Estate Agent Ledger
+                                                        </a>
+                                                        <a href="../Reports/employee_commission_ledger.html"
+                                                            class="dropdown-item">
+                                                            Employee Commission Ledger
+                                                        </a>
+                                                        <a href="../Reports/vendor_ledger.html" class="dropdown-item">
+                                                            Vender Ledger
+                                                        </a>
+                                                        <a href="../Reports/account_ledger.html" class="dropdown-item">
+                                                            Account Ledger
+                                                        </a>
+                                                        <a href="../Reports/bank_ledger.html" class="dropdown-item">
+                                                            Bank Ledger
+                                                        </a>
+                                                        <a href="../Reports/employee_ledger.html" class="dropdown-item">
+                                                            Employee Ledger
+                                                        </a>
+                                                        <a href="../Reports/account_receivables.html"
+                                                            class="dropdown-item">
+                                                            Account Receivables
+                                                        </a>
+                                                        <a href="../Reports/account_payables.html"
+                                                            class="dropdown-item">
+                                                            Account Payables
+                                                        </a>
+                                                        <a href="../Reports/trial_balance.html" class="dropdown-item">
+                                                            Trial Balance
+                                                        </a>
+                                                        <a href="../Reports/balance_sheet.html" class="dropdown-item">
+                                                            Balance Sheet
+                                                        </a>
+                                                        <a href="../Reports/balance_sheet_summary.html"
+                                                            class="dropdown-item">
+                                                            Balance Sheet Summary
+                                                        </a>
+                                                        <a href="../Reports/profit_loss_statement.html"
+                                                            class="dropdown-item">
+                                                            Profit and Loss Statement
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+
+                                                <!-- Inventory -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#inventory"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Inventory
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Reports/inventory_report.html"
+                                                            class="dropdown-item">
+                                                            Inventory Report
+                                                        </a>
+                                                        <a href="../Reports/inventory_in_hand.html"
+                                                            class="dropdown-item">
+                                                            Inventory In Hand
+                                                        </a>
+                                                        <a href="../Reports/inventory_ledger.html"
+                                                            class="dropdown-item">
+                                                            Inventory Ledger
+                                                        </a>
+                                                        <a href="../Reports/inventory_value_wise.html"
+                                                            class="dropdown-item">
+                                                            Inventory Report Value Wise
+                                                        </a>
+                                                        <a href="../Reports/breakage_report.html" class="dropdown-item">
+                                                            Breakage Report
+                                                        </a>
+                                                        <a href="../Reports/inventory_consumption.html"
+                                                            class="dropdown-item">
+                                                            Inventory Consumption
+                                                        </a>
+                                                        <a href="../Reports/inventory_procured_value_wise.html"
+                                                            class="dropdown-item">
+                                                            Inventory Procured Value Wise
+                                                        </a>
+                                                        <a href="../Reports/inventory_consumed_value_wise.html"
+                                                            class="dropdown-item">
+                                                            Inventory Consumed Value Wise
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Sales -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#sales"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Sales
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Reports/sales_property_statement.html"
+                                                            class="dropdown-item">
+                                                            Property Statement
+                                                        </a>
+                                                        <a href="../Reports/customer_properties_summary.html"
+                                                            class="dropdown-item">
+                                                            Customer Properties Summary
+                                                        </a>
+                                                        <a href="../Reports/property_wise_outstandings.html"
+                                                            class="dropdown-item">
+                                                            Property Wise Outstandings
+                                                        </a>
+                                                        <a href="../Reports/due_installments.html"
+                                                            class="dropdown-item">
+                                                            Due Installments
+                                                        </a>
+                                                        <a href="../Reports/property_wise_due.html"
+                                                            class="dropdown-item">
+                                                            Property Wise Due
+                                                        </a>
+                                                        <a href="../Reports/outstanding_installments.html"
+                                                            class="dropdown-item">
+                                                            Outstanding Installments
+                                                        </a>
+                                                        <a href="../Reports/late_installments.html"
+                                                            class="dropdown-item">
+                                                            Late Installments Report
+                                                        </a>
+                                                        <a href="../Reports/sales_with_full_payment.html"
+                                                            class="dropdown-item">
+                                                            Sales With Full Payments
+                                                        </a>
+                                                        <a href="../Reports/outstanding_additional_charges.html"
+                                                            class="dropdown-item">
+                                                            Outstanding Additionals
+                                                        </a>
+                                                        <a href="../Reports/payment_collection.html"
+                                                            class="dropdown-item">
+                                                            Payment Collection
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+
+                                                <!-- Purchases -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#purchases"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Purchases
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Reports/product_wise_purchase.html"
+                                                            class="dropdown-item">
+                                                            Product Wise Purchase
+                                                        </a>
+                                                        <a href="../Reports/pending_requisition_orders.html"
+                                                            class="dropdown-item">
+                                                            Pending Requisition Orders
+                                                        </a>
+                                                        <a href="../Reports/previous_requisition_actions.html"
+                                                            class="dropdown-item">
+                                                            Previous Requisition Actions
+                                                        </a>
+                                                        <a href="../Reports/requisition_order_status.html"
+                                                            class="dropdown-item">
+                                                            Requisition Order Status
+                                                        </a>
+                                                        <a href="../Reports/vendor_wise_purchase.html"
+                                                            class="dropdown-item">
+                                                            Vendor Wise Purchase
+                                                        </a>
+                                                        <a href="../Reports/pending_stock_for_purch_order.html"
+                                                            class="dropdown-item">
+                                                            Pending Stock For PO
+                                                        </a>
+                                                        <a href="../Reports/batch_analysis_report.html"
+                                                            class="dropdown-item">
+                                                            Batch Analysis Report
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+
+                                                <!-- Construction -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#construction"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        Construction
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="../Reports/delayed_construction_stages.html"
+                                                            class="dropdown-item">
+                                                            Delayed Construction Stages
+                                                        </a>
+                                                        <a href="../Reports/construction_ledger.html"
+                                                            class="dropdown-item">
+                                                            Construction Ledger
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- SMS -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#sms" data-bs-toggle="dropdown"
+                                        data-bs-auto-close="outside" role="button" aria-expanded="false">
+                                        <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                                stroke-linecap="round" stroke-linejoin="round">
+
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M11 3h10v8h-3l-4 2v-2h-3z"></path>
+                                                <path
+                                                    d="M15 16v4a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1h2">
+                                                </path>
+                                                <path d="M10 18v.01"></path>
+                                            </svg>
+                                        </span>
+                                        <span class="nav-link-title">
+                                            SMS
+                                        </span>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-menu-columns">
+                                            <div class="dropdown-menu-column">
+
+                                                <!-- sms -pages- -->
+                                                <div class="dropend">
+                                                    <a class="dropdown-item dropdown-toggle" href="#sms"
+                                                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                        role="button" aria-expanded="false">
+                                                        SMS
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="" class="dropdown-item">
+                                                            Manage SMS
+                                                        </a>
+                                                        <a href="" class="dropdown-item">
+                                                            Generate SMS
+                                                        </a>
+                                                        <a href="" class="dropdown-item">
+                                                            SMS Settings
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- EMAILS -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#emails" data-bs-toggle="dropdown"
+                                        data-bs-auto-close="outside" role="button" aria-expanded="false">
+                                        <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                                stroke-linecap="round" stroke-linejoin="round">
+
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                                                <polyline points="3 7 12 13 21 7"></polyline>
+                                            </svg>
+                                        </span>
+                                        <span class="nav-link-title">
+                                            Emails
+                                        </span>
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <!-- <div class="dropdown-menu-columns"> -->
+                                        <div class="dropdown-menu-columns">
+
+                                            <!-- Email -->
+                                            <div class="dropend">
+                                                <a class="dropdown-item dropdown-toggle" href="#email"
+                                                    data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                                                    aria-expanded="false">
+                                                    Emails
+                                                </a>
+                                                <div class="dropdown-menu">
+                                                    <a href="" class="dropdown-item">
+                                                        Manage Emails
+                                                    </a>
+                                                    <a href="" class="dropdown-item">
+                                                        Generate Emails
+                                                    </a>
+                                                    <a href="" class="dropdown-item">
+                                                        Emails Settings
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- </div> -->
+                                    </div>
+                                </li>
+
+                                <!-- SETTINGS -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#setting" data-bs-toggle="dropdown"
+                                        data-bs-auto-close="outside" role="button" aria-expanded="false">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-settings" width="24" height="24"
+                                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path
+                                                d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z">
+                                            </path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg>
+                                        Settings
+                                        </span>
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <a href="" class="dropdown-item">
+                                            settings
+                                        </a>
+
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Page -->
+        <div class="page-wrapper">
+            <div class="container-xl">
+                <!-- Page title -->
+                <div class="page-header d-print-none">
+                    <div class="row g-2 align-items-center">
+                        <div class="col">
+                            <h2 class="page-title">
+                                New Estate Agent
+                            </h2>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Body -->
+            <div class="page-body">
+                <div class="container-2xl mx-2">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Estate Agent Basic Information</h3>
+                            </div>
+                            <div class="card-body bg-muted-lt">
+
+                                <div class="row row-cols-xl-3 flex-row">
+
+
+                                    <div class="form-group mb-2 row">
+                                        <label class="form-label col-5 col-form-label required">Agent Name</label>
+                                        <div class="col">
+                                            <input type="" class="form-control" aria-describedby="" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-2 row">
+                                        <label class="form-label col-5 col-form-label required">Contact</label>
+                                        <div class="col">
+                                            <input type="" class="form-control" aria-describedby="" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-2 row">
+                                        <label class="form-label col-5 col-form-label">Fax</label>
+                                        <div class="col">
+                                            <input type="" class="form-control" aria-describedby="" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-2 row">
+                                        <label class="form-label col-5 col-form-label">Email</label>
+                                        <div class="col">
+                                            <input type="" class="form-control" aria-describedby="" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-2 row">
+                                        <label class="form-label col-5 col-form-label">Website</label>
+                                        <div class="col">
+                                            <input type="" class="form-control" aria-describedby="" placeholder="">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mb-2 row">
+                                        <label class="form-label col-5 col-form-label">Contact Person</label>
+                                        <div class="col">
+                                            <input type="" class="form-control" aria-describedby="" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-2 row">
+                                        <label class="form-label col-5 col-form-label">Contact Person Tel</label>
+                                        <div class="col">
+                                            <input type="" class="form-control" aria-describedby="" placeholder="">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mb-2 row">
+                                        <label class="form-label col-5 col-form-label">Commission Rate</label>
+                                        <div class="col">
+                                            <input type="" class="form-control" aria-describedby="" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-2 row">
+                                        <label class="form-label col-5 col-form-label">Remarks</label>
+                                        <div class="col">
+                                            <input type="" class="form-control" aria-describedby="" placeholder="">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mb-2 row">
+                                        <label class="form-label col-3 col-form-label required">Address</label>
+                                        <div class="col">
+                                            <textarea class="form-control" data-bs-toggle="autosize"
+                                                placeholder=""></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2>Login Details</h2>
+                                <div class="row row-cols-xl-3 flex-row">
+
+                                    <div class="form-group mb-2 row">
+                                        <label class="form-label col-5 col-form-label">Username</label>
+                                        <div class="col">
+                                            <input type="" class="form-control" aria-describedby="" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-2 row">
+                                        <label class="form-label col-5 col-form-label">Password</label>
+                                        <div class="col">
+                                            <input type="" class="form-control" aria-describedby="" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <div class="form-label">Access Type</div>
+                                        <div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                <label class="form-check-label" for="inlineRadio1">Inventory Access	
+                                                </label>
+                                              </div>
+                                              <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                <label class="form-check-label" for="inlineRadio2">Inventory and Reservation Access</label>
+                                              </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-flex">
+                                    <button class="btn btn-primary ms-auto px-5">Submit</button>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <!-- Libs JS -->
+    <!-- <script src="./static/libs/apexcharts/dist/apexcharts.min.js" defer></script> -->
+    <!-- <script src="./static/libs/jsvectormap/dist/js/jsvectormap.min.js" defer></script> -->
+    <!-- <script src="./static/libs/jsvectormap/dist/maps/world.js" defer></script> -->
+    <!-- <script src="./static/libs/jsvectormap/dist/maps/world-merc.js" defer></script> -->
+
+    <script src="../static/js/ost_const.min.js" defer></script>
+    <script src="../static/js/demo.min.js" defer></script>
+</body>
+
+</html>
