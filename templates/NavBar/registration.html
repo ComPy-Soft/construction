@@ -1,0 +1,207 @@
+<li class="nav-item dropdown {% if url_name in modulesPages.Registration %} active {%endif%}">
+    <a class="nav-link dropdown-toggle" href="#registration" data-bs-toggle="dropdown"
+        data-bs-auto-close="outside" role="button" aria-expanded="false">
+        <span class="nav-link-icon d-md-none d-lg-inline-block">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <rect x="4" y="4" width="6" height="6" rx="1"></rect>
+                <rect x="4" y="14" width="6" height="6" rx="1"></rect>
+                <rect x="14" y="14" width="6" height="6" rx="1"></rect>
+                <line x1="14" y1="7" x2="20" y2="7"></line>
+                <line x1="17" y1="4" x2="17" y2="10"></line>
+            </svg>
+        </span>
+        <span class="nav-link-title ">
+            Registration
+        </span>
+    </a>
+    <div class="dropdown-menu">
+        <!-- <div class="dropdown-menu-columns"> -->
+        <!-- <div class="dropdown-menu-column"> -->
+
+        <!-- Customers -->
+        
+        <div class="dropend">
+            <a href="" class="dropdown-item dropdown-toggle {% if url_name in modulesPages.customers %} active {%endif%}" data-bs-toggle="dropdown"
+                data-bs-auto-close="outside" role="button" aria-expanded="false">
+                Customers
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Registration:add_customers' %}" class="dropdown-item">
+                    Add Customers
+                </a>
+                <a href="{% url 'Registration:manage_customers' %}" class="dropdown-item">
+                    Manage Customers
+                </a>
+            </div>
+        </div>
+
+        <!-- Vendors -->
+        
+        <div class="dropend">
+            <a href="" class="dropdown-item dropdown-toggle {% if url_name in modulesPages.vendor %}active{%endif%}" data-bs-toggle="dropdown"
+                data-bs-auto-close="outside" role="button" aria-expanded="false">
+                Vendors
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Registration:add_vendor' %}" class="dropdown-item">
+                    Add Vendors
+                </a>
+                <a href="{% url 'Registration:manage_vendor' %}" class="dropdown-item">
+                    Manage Vendors
+                </a>
+            </div>
+        </div>
+       
+        <!-- Estate Agents -->
+        
+        <div class="dropend">
+            <a href="" class="dropdown-item dropdown-toggle {% if url_name in modulesPages.estateAgents %}active{%endif%}" data-bs-toggle="dropdown"
+                data-bs-auto-close="outside" role="button" aria-expanded="false">
+                Estate Agents
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Registration:add_estate_agents' %}" class="dropdown-item">
+                    Add Estate Agents
+                </a>
+                <a href="{% url 'Registration:manage_estate_agents' %}" class="dropdown-item">
+                    Manage Estate Agents
+                </a>
+            </div>
+        </div>
+        
+
+        <!-- Product Types -->
+        <div class="dropend">
+            <a href="" class="dropdown-item dropdown-toggle {% if url_name in modulesPages.producttypes %}active{%endif%}" data-bs-toggle="dropdown"
+                data-bs-auto-close="outside" role="button" aria-expanded="false">
+                Product Types
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Registration:add_product_types' %}" class="dropdown-item">
+                    Add Product Types
+                </a>
+                <a href="{% url 'Registration:manage_product_types' %}" class="dropdown-item">
+                    Manage Product Types
+                </a>
+            </div>
+        </div>
+
+        <!-- Products -->
+        <div class="dropend">
+            <a href="" class="dropdown-item dropdown-toggle {% if url_name in modulesPages.products %}active{%endif%}" data-bs-toggle="dropdown"
+                data-bs-auto-close="outside" role="button" aria-expanded="false">
+                Products
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Registration:add_products' %}" class="dropdown-item">
+                    Add Products
+                </a>
+                <a href="{% url 'Registration:manage_products' %}" class="dropdown-item">
+                    Manage Products
+                </a>
+            </div>
+        </div>
+
+        <!-- Taxes -->
+        <div class="dropend">
+            <a href="" class="dropdown-item dropdown-toggle {% if url_name in modulesPages.taxes %}active{%endif%}" data-bs-toggle="dropdown"
+                data-bs-auto-close="outside" role="button" aria-expanded="false">
+                Taxes
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Registration:add_taxes' %}" class="dropdown-item">
+                    Add Taxes
+                </a>
+                <a href="{% url 'Registration:manage_taxes' %}" class="dropdown-item">
+                    Manage Taxes
+                </a>
+            </div>
+        </div>
+
+        <!-- Bank Accounts -->
+        <div class="dropend">
+            <a href="" class="dropdown-item dropdown-toggle {% if url_name in modulesPages.bankacounts %}active{%endif%}" data-bs-toggle="dropdown"
+                data-bs-auto-close="outside" role="button" aria-expanded="false">
+                Bank Accounts
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Registration:add_bank_accounts' %}" class="dropdown-item">
+                    Add Bank Accounts
+                </a>
+                <a href="{% url 'Registration:manage_bank_accounts' %}" class="dropdown-item">
+                    Manage Bank Accounts
+                </a>
+            </div>
+        </div>
+
+        <!-- Assets -->
+        <div class="dropend">
+            <a href="" class="dropdown-item dropdown-toggle {% if url_name in modulesPages.assets %}active{%endif%}" data-bs-toggle="dropdown"
+                data-bs-auto-close="outside" role="button" aria-expanded="false">
+                Assets
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Registration:add_assets' %}" class="dropdown-item">
+                    Add Assets
+                </a>
+                <a href="{% url 'Registration:manage_assets' %}" class="dropdown-item">
+                    Manage Assets
+                </a>
+            </div>
+        </div>
+
+        <!-- Users -->
+        <div class="dropend">
+            <a href="" class="dropdown-item dropdown-toggle {% if url_name in modulesPages.users %}active{%endif%}" data-bs-toggle="dropdown"
+                data-bs-auto-close="outside" role="button" aria-expanded="false">
+                Users
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Registration:add_users' %}" class="dropdown-item">
+                    Add Users
+                </a>
+                <a href="{% url 'Registration:manage_users' %}" class="dropdown-item">
+                    Manage Users
+                </a>
+            </div>
+        </div>
+
+        <!-- Expense Types -->
+        <div class="dropend">
+            <a href="" class="dropdown-item dropdown-toggle {% if url_name in modulesPages.expensetypes %}active{%endif%}" data-bs-toggle="dropdown"
+                data-bs-auto-close="outside" role="button" aria-expanded="false">
+                Expense Types
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Registration:add_expense_types' %}" class="dropdown-item">
+                    Add Expense Types
+                </a>
+                <a href="{% url 'Registration:manage_expense_types' %}" class="dropdown-item">
+                    Manage Expense Types
+                </a>
+            </div>
+        </div>
+
+        <!-- Warehouses -->
+        <div class="dropend">
+            <a href="" class="dropdown-item dropdown-toggle {% if url_name in modulesPages.warehouses %}active{%endif%}" data-bs-toggle="dropdown"
+                data-bs-auto-close="outside" role="button" aria-expanded="false">
+                Warehouses
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Registration:add_warehouses' %}" class="dropdown-item">
+                    Add Warehouses
+                </a>
+                <a href="{% url 'Registration:manage_warehouses' %}" class="dropdown-item">
+                    Manage Warehouses
+                </a>
+            </div>
+        </div>
+
+        <!-- </div> -->
+        <!-- </div> -->
+    </div>
+</li>
