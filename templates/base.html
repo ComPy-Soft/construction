@@ -1,5 +1,11 @@
 <!-- Ownsoft Technologies (PVT) Ltd. -->
 <!-- This is for Construction Management System V-1.0 -->
+{% load static %}
+{% load mathfilters %}
+{% load humanize %}
+{% load maintags %}
+
+
 <!doctype html>
 <html lang="en">
 
@@ -9,15 +15,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>OST Construction</title>
     <!-- CSS files -->
-    <link href="../static/css/ost_const.min.css" rel="stylesheet" />
-    <link href="./static/css/ost_const.css" rel="stylesheet" />
-    <link href="./static/css/ost_const-flags.min.css" rel="stylesheet" />
-    <link href="./static/css/ost_const-payments.min.css" rel="stylesheet" />
-    <link href="./static/css/ost_const-vendors.min.css" rel="stylesheet" />
-    <link href="./static/css/demo.min.css" rel="stylesheet" />
+    <link href="{% static 'css/ost_const.min.css'%}" rel="stylesheet" />
+    <link href="{% static 'css/ost_const.css'%}" rel="stylesheet" />
+    <link href="{% static 'css/ost_const-flags.min.css'%}" rel="stylesheet" />
+    <link href="{% static 'css/ost_const-payments.min.css'%}" rel="stylesheet" />
+    <link href="{% static 'css/ost_const-vendors.min.css'%}" rel="stylesheet" />
+    <link href="{% static 'css/demo.min.css' %}" rel="stylesheet" />
 </head>
 
 <body>
+    
   <div class="page">
     <div class="sticky-top">
       <!-- Header -->
@@ -63,7 +70,7 @@
             <div class="nav-item dropdown">
               <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown"
                 aria-label="Open user menu">
-                <span class="avatar avatar-sm" style="background-image: url(./static/avatars/000m.jpg)"></span>
+                <span class="avatar avatar-sm" style="background-image: url('{{ STATIC_URL }}avatars/000m.jpg')"></span>
                 <div class="d-none d-xl-block ps-2">
                   <!-- name -->
                   <div>Sami Shah</div>
@@ -90,11 +97,13 @@
         <div class="collapse navbar-collapse" id="navbar-menu">
           <div class="navbar navbar-light">
             <div class="container-2xl">
-
+                {% with request.resolver_match.url_name as url_name %}
+                {{ url_name }}
               <ul class="navbar-nav fs-3">
                 <!-- DASHBOARD -->
+                {% if url_name == 'index' %}
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">
+                    <a class="nav-link " href="/">
                         <span class="nav-link-icon d-md-none d-lg-inline-block">
                             <!-- Download SVG icon from http://tabler-icons.io/i/home -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
@@ -111,9 +120,30 @@
                         </span>
                     </a>
                 </li>
+                {% else %}
+                <li class="nav-item ">
+                    <a class="nav-link " href="/">
+                        <span class="nav-link-icon d-md-none d-lg-inline-block">
+                            <!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <polyline points="5 12 3 12 12 3 21 12 19 12" />
+                                <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                                <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                            </svg>
+                        </span>
+                        <span class="nav-link-title">
+                            Home
+                        </span>
+                    </a>
+                </li>
+                {% endif %}
 
                 <!-- REGISTRATION -->
-                <li class="nav-item dropdown">
+                {% if url_name in modulesPages.Registration %}
+                <li class="nav-item dropdown active">
                     <a class="nav-link dropdown-toggle" href="#registration" data-bs-toggle="dropdown"
                         data-bs-auto-close="outside" role="button" aria-expanded="false">
                         <span class="nav-link-icon d-md-none d-lg-inline-block">
@@ -128,7 +158,7 @@
                                 <line x1="17" y1="4" x2="17" y2="10"></line>
                             </svg>
                         </span>
-                        <span class="nav-link-title">
+                        <span class="nav-link-title ">
                             Registration
                         </span>
                     </a>
@@ -137,37 +167,70 @@
                         <!-- <div class="dropdown-menu-column"> -->
 
                         <!-- Customers -->
+                        {% if url_name in modulesPages.customers %}
+                        <div class="dropend">
+                            <a href="" class="dropdown-item dropdown-toggle active" data-bs-toggle="dropdown"
+                                data-bs-auto-close="outside" role="button" aria-expanded="false">
+                                Customers
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="{% url 'Registration:add_customers' %}" class="dropdown-item">
+                                    Add Customers
+                                </a>
+                                <a href="{% url 'Registration:manage_customers' %}" class="dropdown-item">
+                                    Manage Customers
+                                </a>
+                            </div>
+                        </div>
+                        {% else %}
                         <div class="dropend">
                             <a href="" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
                                 data-bs-auto-close="outside" role="button" aria-expanded="false">
                                 Customers
                             </a>
                             <div class="dropdown-menu">
-                                <a href="manage_customers.html" class="dropdown-item">
-                                    Manage Customers
-                                </a>
-                                <a href="add_customers.html" class="dropdown-item">
+                                <a href="{% url 'Registration:add_customers' %}" class="dropdown-item">
                                     Add Customers
+                                </a>
+                                <a href="{% url 'Registration:manage_customers' %}" class="dropdown-item">
+                                    Manage Customers
                                 </a>
                             </div>
                         </div>
+                        {% endif %}
 
                         <!-- Vendors -->
+                        {% if url_name in modulesPages.vendor %}
                         <div class="dropend">
-                            <a class="dropdown-item dropdown-toggle" href="#vendors"
-                                data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
-                                aria-expanded="false">
+                            <a href="" class="dropdown-item dropdown-toggle active" data-bs-toggle="dropdown"
+                                data-bs-auto-close="outside" role="button" aria-expanded="false">
                                 Vendors
                             </a>
                             <div class="dropdown-menu">
-                                <a href="manage_vendor.html" class="dropdown-item">
-                                    Manage Vendors
-                                </a>
-                                <a href="add_vendor.html" class="dropdown-item">
+                                <a href="{% url 'Registration:add_vendor' %}" class="dropdown-item">
                                     Add Vendors
+                                </a>
+                                <a href="{% url 'Registration:manage_vendor' %}" class="dropdown-item">
+                                    Manage Vendors
                                 </a>
                             </div>
                         </div>
+                        {% else %}
+                        <div class="dropend">
+                            <a href="" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                                data-bs-auto-close="outside" role="button" aria-expanded="false">
+                                Vendors
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="{% url 'Registration:add_vendor' %}" class="dropdown-item">
+                                    Add Vendors
+                                </a>
+                                <a href="{% url 'Registration:manage_vendor' %}" class="dropdown-item">
+                                    Manage Vendors
+                                </a>
+                            </div>
+                        </div>  
+                        {% endif %}
 
                         <!-- Estate Agents -->
                         <div class="dropend">
@@ -326,6 +389,219 @@
                         <!-- </div> -->
                     </div>
                 </li>
+                {%else%}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#registration" data-bs-toggle="dropdown"
+                        data-bs-auto-close="outside" role="button" aria-expanded="false">
+                        <span class="nav-link-icon d-md-none d-lg-inline-block">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <rect x="4" y="4" width="6" height="6" rx="1"></rect>
+                                <rect x="4" y="14" width="6" height="6" rx="1"></rect>
+                                <rect x="14" y="14" width="6" height="6" rx="1"></rect>
+                                <line x1="14" y1="7" x2="20" y2="7"></line>
+                                <line x1="17" y1="4" x2="17" y2="10"></line>
+                            </svg>
+                        </span>
+                        <span class="nav-link-title ">
+                            Registration
+                        </span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <!-- <div class="dropdown-menu-columns"> -->
+                        <!-- <div class="dropdown-menu-column"> -->
+
+                        <!-- Customers -->
+                        <div class="dropend">
+                            <a href="" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                                data-bs-auto-close="outside" role="button" aria-expanded="false">
+                                Customers
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="{% url 'Registration:add_customers' %}" class="dropdown-item">
+                                    Add Customers
+                                </a>
+                                <a href="{% url 'Registration:manage_customers' %}" class="dropdown-item">
+                                    Manage Customers
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Vendors -->
+                        <div class="dropend">
+                            <a href="" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                                data-bs-auto-close="outside" role="button" aria-expanded="false">
+                                Vendors
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="{% url 'Registration:add_vendor' %}" class="dropdown-item">
+                                    Add Vendors
+                                </a>
+                                <a href="{% url 'Registration:manage_vendor' %}" class="dropdown-item">
+                                    Manage Vendors
+                                </a>
+                            </div>
+
+                        <!-- Estate Agents -->
+                        <div class="dropend">
+                            <a class="dropdown-item dropdown-toggle" href="#estate-agents"
+                                data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                                aria-expanded="false">
+                                Estate Agents
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="manage_estate_agents.html" class="dropdown-item">
+                                    Manage Estate Agents
+                                </a>
+                                <a href="add_estate_agents.html" class="dropdown-item">
+                                    Add Estate Agents
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Product Types -->
+                        <div class="dropend">
+                            <a class="dropdown-item dropdown-toggle" href="#product-types"
+                                data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                                aria-expanded="false">
+                                Product Types
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="manage_product_types.html" class="dropdown-item">
+                                    Manage Product Types
+                                </a>
+                                <a href="add_product_types.html" class="dropdown-item">
+                                    Add Product Types
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Products -->
+                        <div class="dropend">
+                            <a class="dropdown-item dropdown-toggle" href="#products"
+                                data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                                aria-expanded="false">
+                                Products
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="manage_products.html" class="dropdown-item">
+                                    Manage Products
+                                </a>
+                                <a href="add_products.html" class="dropdown-item">
+                                    Add Products
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Taxes -->
+                        <div class="dropend">
+                            <a class="dropdown-item dropdown-toggle" href="#taxes"
+                                data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                                aria-expanded="false">
+                                Taxes
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="manage_taxes.html" class="dropdown-item">
+                                    Manage Taxes
+                                </a>
+                                <a href="add_taxes.html" class="dropdown-item">
+                                    Add Taxes
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Bank Accounts -->
+                        <div class="dropend">
+                            <a class="dropdown-item dropdown-toggle" href="#bank-accounts"
+                                data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                                aria-expanded="false">
+                                Bank Accounts
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="manage_bank_accounts.html" class="dropdown-item">
+                                    Manage Bank Accounts
+                                </a>
+                                <a href="add_bank_accounts.html" class="dropdown-item">
+                                    Add Bank Accounts
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Assets -->
+                        <div class="dropend">
+                            <a class="dropdown-item dropdown-toggle" href="#assets"
+                                data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                                aria-expanded="false">
+                                Assets
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="manage_assets.html" class="dropdown-item">
+                                    Manage Assets
+                                </a>
+                                <a href="add_assets.html" class="dropdown-item">
+                                    Add Assets
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Users -->
+                        <div class="dropend">
+                            <a class="dropdown-item dropdown-toggle" href="#users"
+                                data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                                aria-expanded="false">
+                                Users
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="manage_users.html" class="dropdown-item">
+                                    Manage Users
+                                </a>
+                                <a href="add_users.html" class="dropdown-item">
+                                    Add Users
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Expense Types -->
+                        <div class="dropend">
+                            <a class="dropdown-item dropdown-toggle" href="#expense-types"
+                                data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                                aria-expanded="false">
+                                Expense Types
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="manage_expense_types.html" class="dropdown-item">
+                                    Manage Expense Types
+                                </a>
+                                <a href="add_expense_types.html" class="dropdown-item">
+                                    Add Expense Types
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Warehouses -->
+                        <div class="dropend">
+                            <a class="dropdown-item dropdown-toggle" href="#warehouses"
+                                data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                                aria-expanded="false">
+                                Warehouses
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="manage_warehouses.html" class="dropdown-item">
+                                    Manage Warehouses
+                                </a>
+                                <a href="add_warehouses.html" class="dropdown-item">
+                                    Add Warehouses
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- </div> -->
+                        <!-- </div> -->
+                    </div>
+                </li>
+                {% endif %}
 
                 <!-- ACCOUNTS -->
                 <li class="nav-item dropdown">
@@ -1541,6 +1817,7 @@
                     </div>
                 </li>
             </ul>
+            {% endwith %}
 
             </div>
           </div>
@@ -1549,312 +1826,8 @@
     </div>
 
     <!-- Main Page -->
-    <div class="page-wrapper">
-      <div class="container-xl">
-        <!-- Page title -->
-        <div class="page-header d-print-none">
-          <div class="row g-2 align-items-center">
-            <div class="col">
-              <!-- Page pre-title -->
-              <div class="page-pretitle">
-                Overview
-              </div>
-              <h2 class="page-title">
-                Dashboard
-              </h2>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="page-body">
-        <div class="container-xl">
-          <div class="row row-deck row-cards">
-
-            <!-- Procurement -->
-            <div class="col-sm-6 col-lg-4">
-              <div class="card">
-                <div class="card-body">
-                  <div class="d-flex align-items-center">
-                    <div class="subheader">Procurement</div>
-                    <div class="ms-auto lh-1">
-                      <div class="dropdown">
-                        <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
-                          aria-expanded="false">Last 7 days</a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                          <a class="dropdown-item active" href="#">Last 7 days</a>
-                          <a class="dropdown-item" href="#">Last 30 days</a>
-                          <a class="dropdown-item" href="#">Last 3 months</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="d-flex align-items-baseline">
-                    <div class="h1 mb-3 me-2">2,986</div>
-                    <div class="me-auto">
-                      <span class="text-green d-inline-flex align-items-center lh-1">
-                        4%
-                        <!-- Download SVG icon from http://tabler-icons.io/i/trending-up -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon ms-1" width="24" height="24"
-                          viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-                          stroke-linejoin="round">
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                          <polyline points="3 17 9 11 13 15 21 7" />
-                          <polyline points="14 7 21 7 21 14" />
-                        </svg>
-                      </span>
-                    </div>
-                  </div>
-                  <div id="chart-active-users" class="chart-sm"></div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Total Procurement -->
-            <div class="col-sm-6 col-lg-4">
-              <div class="card">
-                <div class="card-body">
-                  <div class="d-flex align-items-center">
-                    <div class="subheader">Total Procurement</div>
-                    <div class="ms-auto lh-1">
-                      <div class="dropdown">
-                        <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
-                          aria-expanded="false">Last 7 days</a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                          <a class="dropdown-item active" href="#">Last 7 days</a>
-                          <a class="dropdown-item" href="#">Last 30 days</a>
-                          <a class="dropdown-item" href="#">Last 3 months</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="d-flex align-items-baseline">
-                    <div class="h1 mb-0 me-2">4,300</div>
-                    <div class="me-auto">
-                      <span class="text-green d-inline-flex align-items-center lh-1">
-                        8%
-                        <!-- Download SVG icon from http://tabler-icons.io/i/trending-up -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon ms-1" width="24" height="24"
-                          viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-                          stroke-linejoin="round">
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                          <polyline points="3 17 9 11 13 15 21 7" />
-                          <polyline points="14 7 21 7 21 14" />
-                        </svg>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div id="chart-revenue-bg" class="chart-sm"></div>
-              </div>
-            </div>
-
-            <!-- Current Inventory Value -->
-            <div class="col-sm-6 col-lg-4">
-              <div class="card">
-                <div class="card-body">
-                  <div class="d-flex align-items-center">
-                    <div class="subheader">Current Inventory Value</div>
-                    <div class="ms-auto lh-1">
-                      <div class="dropdown">
-                        <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
-                          aria-expanded="false">Last 7 days</a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                          <a class="dropdown-item active" href="#">Last 7 days</a>
-                          <a class="dropdown-item" href="#">Last 30 days</a>
-                          <a class="dropdown-item" href="#">Last 3 months</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="h1 mb-3">75%</div>
-                  <div class="d-flex mb-2">
-                    <div>Conversion rate</div>
-                    <div class="ms-auto">
-                      <span class="text-green d-inline-flex align-items-center lh-1">
-                        7%
-                        <!-- Download SVG icon from http://tabler-icons.io/i/trending-up -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon ms-1" width="24" height="24"
-                          viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-                          stroke-linejoin="round">
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                          <polyline points="3 17 9 11 13 15 21 7" />
-                          <polyline points="14 7 21 7 21 14" />
-                        </svg>
-                      </span>
-                    </div>
-                  </div>
-                  <div class="progress progress-sm">
-                    <div class="progress-bar bg-blue" style="width: 75%" role="progressbar" aria-valuenow="75"
-                      aria-valuemin="0" aria-valuemax="100" aria-label="75% Complete">
-                      <span class="visually-hidden">75% Complete</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Cards For Expense and Payments -->
-            <div class="col-12">
-              <div class="row row-cards">
-                <!-- Expense -->
-                <div class="col-sm-6 col-lg-3">
-                  <div class="card card-sm">
-                    <div class="card-body">
-                      <div class="row align-items-center">
-
-                        <div class="col-auto">
-                          <span class="bg-blue text-white avatar">
-                            <!-- Download SVG icon from http://tabler-icons.io/i/currency-dollar -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
-                              viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                              stroke-linecap="round" stroke-linejoin="round">
-                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                              <path
-                                d="M16.7 8a3 3 0 0 0 -2.7 -2h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1 -2.7 -2" />
-                              <path d="M12 3v3m0 12v3" />
-                            </svg>
-                          </span>
-                        </div>
-                        <div class="col">
-                          <div class="font-weight-medium">
-                            Expense
-                          </div>
-                          <div class="text-muted">
-                            1,000 (Dummy)
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Total Expense -->
-                <div class="col-sm-6 col-lg-3">
-                  <div class="card card-sm">
-                    <div class="card-body">
-                      <div class="row align-items-center">
-                        <div class="col-auto">
-                          <span class="bg-green text-white avatar">
-                            <!-- Download SVG icon from http://tabler-icons.io/i/shopping-cart -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
-                              viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                              stroke-linecap="round" stroke-linejoin="round">
-                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                              <circle cx="6" cy="19" r="2" />
-                              <circle cx="17" cy="19" r="2" />
-                              <path d="M17 17h-11v-14h-2" />
-                              <path d="M6 5l14 1l-1 7h-13" />
-                            </svg>
-                          </span>
-                        </div>
-                        <div class="col">
-                          <div class="font-weight-medium">
-                            Total Expense
-                          </div>
-                          <div class="text-muted">
-                            1,000 (Dummy)
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Payments -->
-                <div class="col-sm-6 col-lg-3">
-                  <div class="card card-sm">
-                    <div class="card-body">
-                      <div class="row align-items-center">
-                        <div class="col-auto">
-                          <span class="bg-twitter text-white avatar">
-                            <!-- Download SVG icon from http://tabler-icons.io/i/brand-twitter -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
-                              viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                              stroke-linecap="round" stroke-linejoin="round">
-                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                              <circle cx="6" cy="19" r="2" />
-                              <circle cx="17" cy="19" r="2" />
-                              <path d="M17 17h-11v-14h-2" />
-                              <path d="M6 5l14 1l-1 7h-13" />
-                            </svg>
-                          </span>
-                        </div>
-                        <div class="col">
-                          <div class="font-weight-medium">
-                            Payments (Expense)
-                          </div>
-                          <div class="text-muted">
-                            1,000 (dummy)
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Total Payments -->
-                <div class="col-sm-6 col-lg-3">
-                  <div class="card card-sm">
-                    <div class="card-body">
-                      <div class="row align-items-center">
-                        <div class="col-auto">
-                          <span class="bg-facebook text-white avatar">
-                            <!-- Download SVG icon from http://tabler-icons.io/i/brand-facebook -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
-                              viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                              stroke-linecap="round" stroke-linejoin="round">
-                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                              <circle cx="6" cy="19" r="2" />
-                              <circle cx="17" cy="19" r="2" />
-                              <path d="M17 17h-11v-14h-2" />
-                              <path d="M6 5l14 1l-1 7h-13" />
-                            </svg>
-                          </span>
-                        </div>
-                        <div class="col">
-                          <div class="font-weight-medium">
-                            Total Payments (Expenses)
-                          </div>
-                          <div class="text-muted">
-                            1,000 (dummy)
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Footer -->
-      <footer class="footer footer-transparent d-print-none">
-        <div class="container-xl">
-          <div class="row text-center align-items-center flex-row-reverse">
-
-            <div class="col-12 col-lg-auto mt-3 mt-lg-0">
-              <ul class="list-inline list-inline-dots mb-0">
-                <li class="list-inline-item">
-                  Copyright &copy; 2022
-                  <a href="" class="link-secondary">OwnSoft Technologies (PVT) Ltd.</a>.
-                  All rights reserved.
-                </li>
-                <li class="list-inline-item">
-                  <a href="" class="link-secondary" rel="noopener">
-                    v1.0.0
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
+    {% block content%}
+    {% endblock %}
 
   </div>
 
@@ -1864,8 +1837,8 @@
   <!-- <script src="./static/libs/jsvectormap/dist/maps/world.js" defer></script> -->
   <!-- <script src="./static/libs/jsvectormap/dist/maps/world-merc.js" defer></script> -->
   <!-- Tabler Core -->
-  <script src="../static/js/ost_const.min.js" defer></script>
-  <script src="../static/js/demo.min.js" defer></script>
+  <script src="{% static 'js/ost_const.min.js' %}" defer></script>
+  <script src="{% static 'js/demo.min.js' %}" defer></script>
 
 </body>
 

@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+    
+    {% block content %}
+    <div class="page-wrapper">
+        <div class="container-xl">
+            <!-- Page title -->
+            <div class="page-header d-print-none">
+                <div class="row g-2 align-items-center">
+                    <div class="col">
+                        <h2 class="page-title">
+                            Add Customers
+                        </h2>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Page Body -->
+        <div class="page-body">
+            <div class="container-2xl mx-2">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">New Customer</h3>
+                        </div>
+                        <div class="card-body bg-muted-lt">
+
+                            <div class="row row-cols-xl-3 flex-row">
+                                <div class="form-group mb-2 row">
+                                    <label class="form-label col-5 col-form-label">Ownership Type</label>
+                                    <div class="col">
+                                        <select class="form-select">
+                                            <option>Single</option>
+                                            <option>Joint</option>
+                                            <option>Multiple (3 Owners)</option>
+                                            <option>Multiple (4 Owners)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group mb-2 row">
+                                    <label class="form-label col-5 col-form-label required">Customer Name</label>
+                                    <div class="col">
+                                        <input type="" class="form-control" aria-describedby="" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-2 row">
+                                    <label class="form-label col-5 col-form-label">Customer Password</label>
+                                    <div class="col">
+                                        <input type="" class="form-control" aria-describedby="" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-2 row">
+                                    <label class="form-label col-5 col-form-label required">Customer Share (in
+                                        %)</label>
+                                    <div class="col">
+                                        <input type="" class="form-control" aria-describedby="" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-2 row">
+                                    <label class="form-label col-5 col-form-label required">CNIC</label>
+                                    <div class="col">
+                                        <input type="" class="form-control" aria-describedby="" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-2 row">
+                                    <label class="form-label col-5 col-form-label required">Tel</label>
+                                    <div class="col">
+                                        <input type="" class="form-control" aria-describedby="" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-2 row">
+                                    <label class="form-label col-5 col-form-label">Fax</label>
+                                    <div class="col">
+                                        <input type="" class="form-control" aria-describedby="" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-2 row">
+                                    <label class="form-label col-5 col-form-label required">Contact</label>
+                                    <div class="col">
+                                        <input type="" class="form-control" aria-describedby="" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-2 row">
+                                    <label class="form-label col-5 col-form-label">Alt. Contact</label>
+                                    <div class="col">
+                                        <input type="" class="form-control" aria-describedby="" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-2 row">
+                                    <label class="form-label col-5 col-form-label">NTN</label>
+                                    <div class="col">
+                                        <input type="" class="form-control" aria-describedby="" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-2 row">
+                                    <label class="form-label col-5 col-form-label">GST</label>
+                                    <div class="col">
+                                        <input type="" class="form-control" aria-describedby="" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-2 row">
+                                    <label class="form-label col-5 col-form-label required">Owner NIC Front
+                                        Side</label>
+                                    <div class="col">
+                                        <input type="file" class="form-control" aria-describedby="" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-2 row">
+                                    <label class="form-label col-5 col-form-label">Email</label>
+                                    <div class="col">
+                                        <input type="" class="form-control" aria-describedby="" placeholder="">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group mb-2 row">
+                                    <label class="form-label col-5 col-form-label">District</label>
+                                    <div class="col">
+                                        <input type="" class="form-control" aria-describedby="" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-2 row">
+                                    <label class="form-label col-5 col-form-label required">Owner NIC Back
+                                        Side</label>
+                                    <div class="col">
+                                        <input type="file" class="form-control" aria-describedby="" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-2 row">
+                                    <label class="form-label col-5 col-form-label">Tehsil</label>
+                                    <div class="col">
+                                        <input type="" class="form-control" aria-describedby="" placeholder="">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group mb-2 row">
+                                    <label class="form-label col-3 col-form-label required">Address</label>
+                                    <div class="col">
+                                        <textarea class="form-control" data-bs-toggle="autosize"
+                                            placeholder=""></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-2 row">
+                                    <label class="form-label col-5 col-form-label required">Owner Pic</label>
+                                    <div class="col">
+                                        <input type="file" class="form-control" aria-describedby="" placeholder="">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex">
+                                <button class="btn btn-primary ms-auto w-35">Submit</button>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    {% endblock %}
