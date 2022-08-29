@@ -1,16 +1,14 @@
-<li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#accounts" data-bs-toggle="dropdown"
-        data-bs-auto-close="outside" role="button" aria-expanded="false">
+<li class="nav-item dropdown {% if url_name in pages.all_account_pages %} active {%endif%}">
+    <a class="nav-link dropdown-toggle" href="#accounts" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+        role="button" aria-expanded="false">
         <span class="nav-link-icon d-md-none d-lg-inline-block">
-            <svg xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-file-invoice" width="24" height="24"
-                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-invoice" width="24"
+                height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
                 stroke-linecap="round" stroke-linejoin="round">
 
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                 <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
-                <path
-                    d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z">
+                <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z">
                 </path>
                 <line x1="9" y1="7" x2="10" y2="7"></line>
                 <line x1="9" y1="13" x2="15" y2="13"></line>
@@ -22,147 +20,128 @@
         </span>
     </a>
     <div class="dropdown-menu">
-        <div class="dropdown-menu-columns">
-            <div class="dropdown-menu-column">
 
-                <!-- Payment Vouchers -->
-                <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#payment-vouchers"
-                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                        role="button" aria-expanded="false">
-                        Payment Vouchers
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../Accounts/manage_pay_vouch.html"
-                            class="dropdown-item">
-                            Manage Payments
-                        </a>
-                        <a href="../Accounts/add_payment_voucher.html"
-                            class="dropdown-item">
-                            Add Payment Vouchers
-                        </a>
-                    </div>
-                </div>
 
-                <!-- Expense Vouchers -->
-                <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#expense-vouchers"
-                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                        role="button" aria-expanded="false">
-                        Expense Vouchers
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../Accounts/manage_exp_vouch.html"
-                            class="dropdown-item">
-                            Manage Expense Vouchers
-                        </a>
-                        <a href="../Accounts/add_expense_voucher.html"
-                            class="dropdown-item">
-                            Add Expense Vouchers
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Receipt Vouchers -->
-                <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#receipt-vouchers"
-                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                        role="button" aria-expanded="false">
-                        Receipt Vouchers
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../Accounts/manage_receipt_vouch.html"
-                            class="dropdown-item">
-                            Manage Receipt Vouchers
-                        </a>
-                        <a href="../Accounts/add_receipt_voucher.html"
-                            class="dropdown-item">
-                            Add Receipt Vouchers
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Opening Vouchers -->
-                <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#opening-vouchers"
-                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                        role="button" aria-expanded="false">
-                        Opening Vouchers
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../Accounts/manage_opening_voucher.html"
-                            class="dropdown-item">
-                            Manage Opening Vouchers
-                        </a>
-                        <a href="../Accounts/add_opening_voucher.html"
-                            class="dropdown-item">
-                            Add Opening Vouchers
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Journel Vouchers -->
-                <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#journel-vouchers"
-                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                        role="button" aria-expanded="false">
-                        Journel Vouchers
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../Accounts/manage_journel_voucher.html"
-                            class="dropdown-item">
-                            Manage Journel Vouchers
-                        </a>
-                        <a href="../Accounts/add_journel_voucher.html"
-                            class="dropdown-item">
-                            Add Journel Vouchers
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Debit Notes -->
-                <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#debit-notes"
-                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                        role="button" aria-expanded="false">
-                        Debit Notes
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../Accounts/manage_debit_notes.html"
-                            class="dropdown-item">
-                            Manage Debit Notes
-                        </a>
-                        <a href="../Accounts/add_debit_notes.html"
-                            class="dropdown-item">
-                            Add Debit Notes
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Bank Deposits -->
-                <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#bank-deposits"
-                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                        role="button" aria-expanded="false">
-                        Bank Deposits
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../Accounts/manage_bank_deposit_vouch.html"
-                            class="dropdown-item">
-                            Manage Bank Deposits
-                        </a>
-                        <a href="../Accounts/add_bank_deposit_voucher.html"
-                            class="dropdown-item">
-                            Add Bank Deposits
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Chart of Accounts -->
-                <a class="dropdown-item" href="../Accounts/chart_of_accounts.html">
-                    Chart of Accounts
+        <!-- Payment Vouchers -->
+        <div class="dropend">
+            <a class="dropdown-item dropdown-toggle {% if url_name in pages.PaymentVouchers %} active {%endif%}"
+                href="#payment-vouchers" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                aria-expanded="false">
+                Payment Vouchers
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Accounts:add_payment_voucher' %}" class="dropdown-item">
+                    Add Payment Voucher
                 </a>
+                <a href="{% url 'Accounts:manage_payment_voucher' %}" class="dropdown-item">
+                    Manage Payment Vouchers
             </div>
         </div>
+
+        <!-- Expense Vouchers -->
+        <div class="dropend">
+            <a class="dropdown-item dropdown-toggle {% if url_name in pages.ExpenseVouchers %} active {%endif%}"
+                href="#expense-vouchers" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                aria-expanded="false">
+                Expense Vouchers
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Accounts:add_expense_voucher' %}" class="dropdown-item">
+                    Add Expense Voucher
+                </a>
+                <a href="{% url 'Accounts:manage_expense_voucher' %}" class="dropdown-item">
+                    Manage Expense Vouchers
+            </div>
+        </div>
+
+        <!-- Receipt Vouchers -->
+        <div class="dropend">
+            <a class="dropdown-item dropdown-toggle {% if url_name in pages.ReceiptVouchers %} active {%endif%}"
+                href="#receipt-vouchers" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                aria-expanded="false">
+                Receipt Vouchers
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Accounts:add_receipt_voucher' %}" class="dropdown-item">
+                    Add Receipt Voucher
+                </a>
+                <a href="{% url 'Accounts:manage_receipt_voucher' %}" class="dropdown-item">
+                    Manage Receipt Vouchers
+            </div>
+        </div>
+
+        <!-- Opening Vouchers -->
+        <div class="dropend">
+            <a class="dropdown-item dropdown-toggle {% if url_name in pages.OpeningVouchers %} active {%endif%}"
+                href="#opening-vouchers" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                aria-expanded="false">
+                Opening Vouchers
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Accounts:add_opening_voucher' %}" class="dropdown-item">
+                    Add Opening Voucher
+                </a>
+                <a href="{% url 'Accounts:manage_opening_voucher' %}" class="dropdown-item">
+                    Manage Opening Vouchers
+            </div>
+        </div>
+
+        <!-- Journel Vouchers -->
+        <div class="dropend">
+            <a class="dropdown-item dropdown-toggle {% if url_name in pages.JournelVouchers %} active {%endif%}"
+                href="#journal-vouchers" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                aria-expanded="false">
+                Journal Vouchers
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Accounts:add_journal_voucher' %}" class="dropdown-item">
+                    Add Journal Voucher
+                </a>
+                <a href="{% url 'Accounts:manage_journal_voucher' %}" class="dropdown-item">
+                    Manage Journal Vouchers
+            </div>
+        </div>
+
+        <!-- Debit Notes -->
+        <div class="dropend">
+            <a class="dropdown-item dropdown-toggle {% if url_name in pages.DebitNotes %} active {%endif%}"
+                href="#debit-notes" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                aria-expanded="false">
+                Debit Notes
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Accounts:add_debit_notes' %}" class="dropdown-item">
+                    Add Debit Note
+                </a>
+                <a href="{% url 'Accounts:manage_debit_notes' %}" class="dropdown-item">
+                    Manage Debit Notes
+            </div>
+        </div>
+
+        <!-- Bank Deposits -->
+        <div class="dropend">
+            <a class="dropdown-item dropdown-toggle {% if url_name in pages.BankDeposits %} active {%endif%}"
+                href="#bank-deposits" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                aria-expanded="false">
+                Bank Deposits
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Accounts:add_bank_deposit_voucher' %}" class="dropdown-item">
+                    Add Bank Deposit
+                </a>
+                <a href="{% url 'Accounts:manage_bank_deposit_voucher' %}" class="dropdown-item">
+                    Manage Bank Deposits
+            </div>
+        </div>
+
+        <!-- Chart of Accounts -->
+        <div class="dropend">
+            <a class="dropdown-item dropdown-toggle {% if url_name in pages.ChartOfAccounts %} active {%endif%}"
+                href="{% url 'Accounts:chart_of_accounts' %}">
+                Chart of Accounts
+            </a>
+
+        </div>
     </div>
+
 </li>

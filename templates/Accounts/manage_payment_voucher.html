@@ -1,12 +1,13 @@
-{%extends 'base.html'%}
-{%block content%}
+{% extends 'base.html' %}
+
+{% block content %}
 <!-- Main Page -->
 <div class="page-wrapper">
     <div class="container-xl">
         <!-- Page title -->
         <div class="page-header d-print-none">
             <h2 class="page-title">
-                Manage Debit Notes
+                Manage Payment Vouchers
             </h2>
 
         </div>
@@ -19,7 +20,7 @@
                 <div class="card">
                     <div class="card-status-bottom bg-blue"></div>
                     <div class="card-header">
-                        <h3 class="card-title fs-2">Manage Debit Notes</h3>
+                        <h3 class="card-title fs-2">Manage Payment Vouchers</h3>
                         <div class="card-actions">
                             <a href="" class="btn btn-outline-primary">
                                 <svg xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +32,7 @@
                                     <line x1="12" y1="5" x2="12" y2="19"></line>
                                     <line x1="5" y1="12" x2="19" y2="12"></line>
                                 </svg>
-                                Add Debit Note
+                                Add Payment Voucher
                             </a>
                             <a href="#" class="btn btn-outline-danger">
                                 <svg xmlns="http://www.w3.org/2000/svg"
@@ -165,12 +166,32 @@
                                         <tr class="">
                                             <th><input class="form-check-input" type="checkbox"
                                                     aria-label=""></th>
-                                            <th><button class="table-sort" data-sort="sort-name">Debit Note</button></th>
-                                            <th><button class="table-sort" data-sort="sort-name">Date</button></th>
-                                            <th><button class="table-sort" data-sort="sort-name">Vender</button></th>
-                                            <th><button class="table-sort" data-sort="sort-name">Amount</button></th>
-                                            <th><button class="table-sort" data-sort="sort-name">Description</button></th>
-                                            <th><button class="table-sort" data-sort="sort-name">Status</button></th>
+                                            <th><button class="table-sort" data-sort="sort-name">PV ID</button>
+                                            </th>
+                                            <th><button class="table-sort" data-sort="sort-name">Date</button>
+                                            </th>
+                                            <th><button class="table-sort" data-sort="sort-name">VCH.
+                                                    Type</button></th>
+                                            <th><button class="table-sort" data-sort="sort-name">Agent
+                                                    Name</button></th>
+                                            <th><button class="table-sort" data-sort="sort-name">Trans.
+                                                    Mode</button></th>
+                                            <th><button class="table-sort" data-sort="sort-name">Bank</button>
+                                            </th>
+                                            <th><button class="table-sort" data-sort="sort-name">Acc
+                                                    No.</button></th>
+                                            <th><button class="table-sort" data-sort="sort-name">Trans.
+                                                    Ref.</button></th>
+                                            <th><button class="table-sort" data-sort="sort-name">Pay.
+                                                    Amount</button></th>
+                                            <th><button class="table-sort"
+                                                    data-sort="sort-name">Deduction</button></th>
+                                            <th><button class="table-sort" data-sort="sort-name">Tax</button>
+                                            </th>
+                                            <th><button class="table-sort" data-sort="sort-name">Net
+                                                    Amount</button></th>
+                                            <th><button class="table-sort" data-sort="sort-name">Status</button>
+                                            </th>
                                         </tr>
                                     </thead>
 
@@ -180,9 +201,16 @@
                                                 <input class="form-check-input " type="checkbox">
                                             </td>
                                             <td>PVNO. 001</td>
-                                            <td>ada</td>
                                             <td>22/22/2222</td>
+                                            <td>vendor</td>
+                                            <td>sami shah</td>
+                                            <td>cash in hand</td>
+                                            <td>islami bank</td>
+                                            <td>1053002200</td>
                                             <td>1221s</td>
+                                            <td>1,000</td>
+                                            <td>1,000</td>
+                                            <td>20</td>
                                             <td>32320</td>
                                             <td><span class="badge bg-blue me-1"></span>Posted</td>
                                             <!-- <td><span class="badge bg-danger me-1"></span>Inactive</td> -->
@@ -234,11 +262,23 @@
                 </div>
 
                 <!-- Total k liye -->
-                <div class="card-footer mt-2">
-                    <div class="row row-cols-xl-2 flex-row">
-                        
-                        <div class="form-group row">
-                            <label class="form-label col-4 col-form-label">Total Debit Notes Amount:</label>
+                <div class="card-footer">
+                    <div class="row row-cols-xl-3 flex-row">
+
+                        <div class="form-group mb-2 row">
+                            <label class="form-label col-5 col-form-label">Total Payment:</label>
+                            <div class="col">
+                                <input type="" class="form-control" aria-describedby="" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group mb-2 row">
+                            <label class="form-label col-5 col-form-label">Total Tax:</label>
+                            <div class="col">
+                                <input type="" class="form-control" aria-describedby="" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group mb-2 row">
+                            <label class="form-label col-5 col-form-label">Net Total:</label>
                             <div class="col">
                                 <input type="" class="form-control" aria-describedby="" placeholder="">
                             </div>
