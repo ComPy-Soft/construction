@@ -1,5 +1,4 @@
-def pages(request):
-    Registration = {
+{
     "all_registration_pages": [
         "add_customers",
         "manage_customers",
@@ -194,10 +193,9 @@ def pages(request):
         "manage_surcharge_waiver"
     ],
     "deletepropertysales": [
-        "add_delete_property_sales"
+        "master_delete_property_sales"
     ],
     "upgradepropertyprices": [
         "upgrade_property_prices"
     ]
 }
-    return {"pages": Registration}

@@ -1,13 +1,11 @@
-<li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#sales" data-bs-toggle="dropdown"
-        data-bs-auto-close="outside" role="button" aria-expanded="false">
+<li class="nav-item dropdown {% if url_name in pages.all_sales_pages %} active {%endif%}">
+    <a class="nav-link dropdown-toggle" href="#sales" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+        role="button" aria-expanded="false">
         <span class="nav-link-icon d-md-none d-lg-inline-block">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
-                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path
-                    d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2">
+                <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2">
                 </path>
                 <rect x="9" y="3" width="6" height="4" rx="2"></rect>
                 <path d="M9 17v-5"></path>
@@ -20,248 +18,220 @@
         </span>
     </a>
     <div class="dropdown-menu">
-        <div class="dropdown-menu-columns">
-            <div class="dropdown-menu-column">
 
-                <!-- Properties -->
-                <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#properties"
-                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                        role="button" aria-expanded="false">
-                        Properties
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../Sales/manage_properties.html" class="dropdown-item">
-                            Manage Properties
-                        </a>
-                        <a href="../Sales/generate_properties.html"
-                            class="dropdown-item">
-                            Generate Properties
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Property Sales -->
-                <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#property-sales"
-                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                        role="button" aria-expanded="false">
-                        Property Sales
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../Sales/manage_property_sales.html"
-                            class="dropdown-item">
-                            Manage Property Sales
-                        </a>
-                        <a href="../Sales/add_property_sale.html" class="dropdown-item">
-                            Add Property Sales
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Agent Commissions -->
-                <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#agent-commissions"
-                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                        role="button" aria-expanded="false">
-                        Agent Commissions
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../Sales/manage_agent_commission.html"
-                            class="dropdown-item">
-                            Manage Agent Commissions
-                        </a>
-                        <a href="../Sales/add_agent_commission.html"
-                            class="dropdown-item">
-                            Add Agent Commissions
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Installment Plans -->
-                <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#installment-plans"
-                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                        role="button" aria-expanded="false">
-                        Installment Plans
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../Sales/manage_installment_plans.html"
-                            class="dropdown-item">
-                            Manage Installment Plans
-                        </a>
-                        <a href="../Sales/add_installment_plan.html"
-                            class="dropdown-item">
-                            Add Installment Plans
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Installment Plans (Type B) -->
-                <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle"
-                        href="#installment-plan-type-B" data-bs-toggle="dropdown"
-                        data-bs-auto-close="outside" role="button"
-                        aria-expanded="false">
-                        Installment Plans (Type B)
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../Sales/manage_installment_plans_B.html"
-                            class="dropdown-item">
-                            Manage Installment Plans (Type B)
-                        </a>
-                        <a href="../Sales/add_installment_plan_B.html"
-                            class="dropdown-item">
-                            Add Installment Plans (Type B)
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Buy Backs -->
-                <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#buy-backs"
-                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                        role="button" aria-expanded="false">
-                        Buy Backs
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../Sales/manage_property_buy_back.html"
-                            class="dropdown-item">
-                            Manage Buy Backs
-                        </a>
-                        <a href="../Sales/add_property_buy_back.html"
-                            class="dropdown-item">
-                            Add Buy Backs
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Property Transfers -->
-                <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#property-transfers"
-                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                        role="button" aria-expanded="false">
-                        Property Transfers
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../Sales/manage_property_transfer.html"
-                            class="dropdown-item">
-                            Manage Property Transfers
-                        </a>
-                        <a href="../Sales/add_property_transfer.html"
-                            class="dropdown-item">
-                            Add Property Transfers
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Property Mergers -->
-                <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#property-mergers"
-                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                        role="button" aria-expanded="false">
-                        Property Mergers
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../Sales/manage_property_mergers.html"
-                            class="dropdown-item">
-                            Manage Property Mergers
-                        </a>
-                        <a href="../Sales/add_property_merger.html"
-                            class="dropdown-item">
-                            Add Property Mergers
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Property Cancellations -->
-                <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle"
-                        href="#property-cancellations" data-bs-toggle="dropdown"
-                        data-bs-auto-close="outside" role="button"
-                        aria-expanded="false">
-                        Property Cancellations
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../Sales/manage_property_cancellations.html"
-                            class="dropdown-item">
-                            Manage Property Cancellations
-                        </a>
-                        <a href="../Sales/add_property_cancellation.html"
-                            class="dropdown-item">
-                            Add Property Cancellations
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Additional Charges -->
-                <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#additional-charges"
-                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                        role="button" aria-expanded="false">
-                        Additional Charges
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../Sales/manage_additional_charges.html"
-                            class="dropdown-item">
-                            Manage Additional Charges
-                        </a>
-                        <a href="../Sales/add_additional_charges.html"
-                            class="dropdown-item">
-                            Add Additional Charges
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Property Subcharges -->
-                <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#property-surcharges"
-                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                        role="button" aria-expanded="false">
-                        Property Surcharges
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../Sales/manage_property_surcharge.html"
-                            class="dropdown-item">
-                            Manage Property Surcharges
-                        </a>
-                        <a href="../Sales/add_property_surcharge.html"
-                            class="dropdown-item">
-                            Add Property Surcharges
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Surcharge Waivers -->
-                <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#surcharge-waivers"
-                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                        role="button" aria-expanded="false">
-                        Surcharge Waivers
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../Sales/manage_surcharge_waiver.html"
-                            class="dropdown-item">
-                            Manage Surcharge Waivers
-                        </a>
-                        <a href="../Sales/add_surcharge_waiver.html"
-                            class="dropdown-item">
-                            Add Surcharge Waivers
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Upgrade Property Prices -->
-                <a class="dropdown-item" href="../Sales/upgrade_property_prices.html">
-                    Upgrade Property Prices
+        <!-- Properties -->
+        <div class="dropend">
+            <a class="dropdown-item dropdown-toggle {% if url_name in pages.generateproperties %} active {%endif%}"
+                href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                aria-expanded="false">
+                Properties
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Sales:manage_properties' %}" class="dropdown-item">
+                    Manage Properties
                 </a>
-
-                <!-- Master Delete -->
-                <a class="dropdown-item"
-                    href="../Sales/master_delete_property_sales.html">
-                    Master Delete
+                <a href="{% url 'Sales:generate_properties' %}" class="dropdown-item">
+                    Generate Properties
                 </a>
             </div>
         </div>
+
+        <!-- Property Sales -->
+        <div class="dropend">
+            <a class="dropdown-item dropdown-toggle {% if url_name in pages.propertysale %} active {%endif%}"
+                href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                aria-expanded="false">
+                Property Sales
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Sales:add_property_sale' %}" class="dropdown-item">
+                    Add Property Sale
+                </a>
+                <a href="{% url 'Sales:manage_property_sale' %}" class="dropdown-item">
+                    Manage Property Sales
+                </a>
+            </div>
+        </div>
+
+        <!-- Agent Commissions -->
+        <div class="dropend">
+            <a class="dropdown-item dropdown-toggle {% if url_name in pages.agentcommission %} active {%endif%}"
+                href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                aria-expanded="false">
+                Agent Commissions
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Sales:add_agent_commission' %}" class="dropdown-item">
+                    Add Agent Commission
+                </a>
+                <a href="{% url 'Sales:manage_agent_commission' %}" class="dropdown-item">
+                    Manage Agent Commissions
+                </a>
+            </div>
+        </div>
+
+        <!-- Installment Plans -->
+        <div class="dropend">
+            <a class="dropdown-item dropdown-toggle {% if url_name in pages.installmentplan %} active {%endif%}"
+                href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                aria-expanded="false">
+                Installment Plans
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Sales:add_installment_plan' %}" class="dropdown-item">
+                    Add Installment Plan
+                </a>
+                <a href="{% url 'Sales:manage_installment_plan' %}" class="dropdown-item">
+                    Manage Installment Plans
+                </a>
+            </div>
+        </div>
+
+
+        <!-- Installment Plans (Type B) -->
+        <div class="dropend">
+            <a class="dropdown-item dropdown-toggle {% if url_name in pages.installmentplanB %} active {%endif%}"
+                href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                aria-expanded="false">
+                Installment Plans (Type B)
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Sales:add_installment_plan_B' %}" class="dropdown-item">
+                    Add Installment Plan (Type B)
+                </a>
+                <a href="{% url 'Sales:manage_installment_plan_B' %}" class="dropdown-item">
+                    Manage Installment Plans (Type B)
+                </a>
+            </div>
+        </div>
+
+        <!-- Buy Backs -->
+        <div class="dropend">
+            <a class="dropdown-item dropdown-toggle {% if url_name in pages.propertybuyback %} active {%endif%}"
+                href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                aria-expanded="false">
+                Buy Backs
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Sales:add_property_buy_back' %}" class="dropdown-item">
+                    Add Buy Back
+                </a>
+                <a href="{% url 'Sales:manage_property_buy_back' %}" class="dropdown-item">
+                    Manage Buy Backs
+                </a>
+            </div>
+        </div>
+
+        <!-- Property Transfers -->
+        <div class="dropend">
+            <a class="dropdown-item dropdown-toggle {% if url_name in pages.propertytransfer %} active {%endif%}"
+                href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                aria-expanded="false">
+                Property Transfers
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Sales:add_property_transfer' %}" class="dropdown-item">
+                    Add Property Transfer
+                </a>
+                <a href="{% url 'Sales:manage_property_transfer' %}" class="dropdown-item">
+                    Manage Property Transfers
+                </a>
+            </div>
+        </div>
+
+        <!-- Property Mergers -->
+        <div class="dropend">
+            <a class="dropdown-item dropdown-toggle {% if url_name in pages.propertymerger %} active {%endif%}"
+                href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                aria-expanded="false">
+                Property Mergers
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Sales:add_property_merger' %}" class="dropdown-item">
+                    Add Property Merger
+                </a>
+                <a href="{% url 'Sales:manage_property_merger' %}" class="dropdown-item">
+                    Manage Property Mergers
+                </a>
+            </div>
+        </div>
+
+        <!-- Property Cancellations -->
+        <div class="dropend">
+            <a class="dropdown-item dropdown-toggle {% if url_name in pages.propertycancellation %} active {%endif%}"
+                href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                aria-expanded="false">
+                Property Cancellations
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Sales:add_property_cancellation' %}" class="dropdown-item">
+                    Add Property Cancellation
+                </a>
+                <a href="{% url 'Sales:manage_property_cancellation' %}" class="dropdown-item">
+                    Manage Property Cancellations
+                </a>
+            </div>
+        </div>
+
+        <!-- Additional Charges -->
+        <div class="dropend">
+            <a class="dropdown-item dropdown-toggle {% if url_name in pages.additionalcharges %} active {%endif%}"
+                href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                aria-expanded="false">
+                Additional Charges
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Sales:add_additional_charges' %}" class="dropdown-item">
+                    Add Additional Charge
+                </a>
+                <a href="{% url 'Sales:manage_additional_charges' %}" class="dropdown-item">
+                    Manage Additional Charges
+                </a>
+            </div>
+        </div>
+
+        <!-- Property Subcharges -->
+        <div class="dropend">
+            <a class="dropdown-item dropdown-toggle {% if url_name in pages.propertysurcharge %} active {%endif%}"
+                href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                aria-expanded="false">
+                Property Surcharges
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Sales:add_property_surcharge' %}" class="dropdown-item">
+                    Add Property Surcharge
+                </a>
+                <a href="{% url 'Sales:manage_property_surcharge' %}" class="dropdown-item">
+                    Manage Property Surcharges
+                </a>
+            </div>
+        </div>
+
+        <!-- Surcharge Waivers -->
+        <div class="dropend">
+            <a class="dropdown-item dropdown-toggle {% if url_name in pages.surchargewaiver %} active {%endif%}"
+                href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                aria-expanded="false">
+                Surcharge Waivers
+            </a>
+            <div class="dropdown-menu">
+                <a href="{% url 'Sales:add_surcharge_waiver' %}" class="dropdown-item">
+                    Add Surcharge Waiver
+                </a>
+                <a href="{% url 'Sales:manage_surcharge_waiver' %}" class="dropdown-item">
+                    Manage Surcharge Waivers
+                </a>
+            </div>
+        </div>
+
+        <!-- Upgrade Property Prices -->
+        <a class="dropdown-item {% if url_name in pages.upgradepropertyprices %} active {%endif%}" href="{% url 'Sales:upgrade_property_prices' %}">
+            Upgrade Property Prices
+        </a>
+
+        <!-- Master Delete -->
+        <a class="dropdown-item {% if url_name in pages.deletepropertysales %} active {%endif%}" href="{% url 'Sales:master_delete_property_sales' %}">
+            Master Delete
+        </a>
     </div>
 </li>

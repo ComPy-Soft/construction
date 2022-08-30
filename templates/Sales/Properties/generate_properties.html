@@ -1,0 +1,286 @@
+{%extends 'base.html'%}
+{%block content%}
+ <!-- Main Page -->
+ <div class="page-wrapper">
+    <div class="container-xl">
+        <!-- Page title -->
+        <div class="page-header d-print-none">
+            <div class="row g-2 align-items-center">
+                <div class="col">
+                    <h2 class="page-title">
+                        Add New Properties
+                    </h2>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Body -->
+    <div class="page-body">
+        <div class="container-2xl mx-2">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Generate New Properties</h3>
+                    </div>
+                    <div class="card-body bg-muted-lt">
+
+                        <h2>Basic Information</h2>
+                        <div class="row row-cols-xl-3 flex-row">
+
+                            <div class="form-group mb-2 row">
+                                <label class="form-label col-5 col-form-label required">Voucher Date</label>
+                                <div class="col">
+                                    <input type="date" class="form-control" aria-describedby="" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2>Property Details</h2>
+                        <div class="row row-cols-xl-3 flex-row">
+
+                            <div class="form-group mb-2 row">
+                                <label class="form-label col-5 col-form-label required">Property
+                                    Category</label>
+                                <div class="col">
+                                    <select class="form-select">
+                                        <option>select property category</option>
+                                        <option>Residential</option>
+                                        <option>Commercial</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- <div class="form-group mb-2 row">
+                                <label class="form-label col-5 col-form-label required">Property Type</label>
+                                <div class="col">
+                                    <select class="form-select">
+                                        <option>select property category</option>
+                                        <option>Residential</option>
+                                        <option>Commercial</option>
+                                    </select>
+                                </div>
+                            </div> -->
+
+                            <!-- commercial -->
+                            <div class="form-group mb-2 row">
+                                <label class="form-label col-5 col-form-label required">Property Type</label>
+                                <div class="col">
+                                    <select class="form-select">
+                                        <option>select property type</option>
+                                        <option>Clinic</option>
+                                        <option>Office</option>
+                                        <option>Shop</option>
+                                        <option>Commercial Plot</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Residential -->
+                            <div class="form-group mb-2 row">
+                                <label class="form-label col-5 col-form-label required">Property Type</label>
+                                <div class="col">
+                                    <select class="form-select">
+                                        <option>select property type</option>
+                                        <option>Residential Plot</option>
+                                        <option>Apartment</option>
+                                        <option>Home</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row-cols-xl-3 flex-row">
+                            <div class="form-group mb-2 row">
+                                <label class="form-label col-5 col-form-label required">Sale Price</label>
+                                <div class="col">
+                                    <input type="" class="form-control" aria-describedby="" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-2 row">
+                                <label class="form-label col-5 col-form-label">Dimensions</label>
+                                <div class="col">
+                                    <input type="" class="form-control" aria-describedby="" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-2 row">
+                                <label class="form-label col-5 col-form-label required">Area (sqft)</label>
+                                <div class="col">
+                                    <input type="" class="form-control" aria-describedby="" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-2 row">
+                                <label class="form-label col-5 col-form-label">Unit Description</label>
+                                <div class="col">
+                                    <input type="" class="form-control" aria-describedby="" placeholder="">
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group mb-2 row">
+                                <label class="form-label col-5 col-form-label required">No of Units To Be
+                                    Generated</label>
+                                <div class="col">
+                                    <input type="" class="form-control" aria-describedby="" placeholder="">
+                                </div>
+                            </div>
+
+                            <!-- Sector -->
+                            <div class="form-group mb-2 row">
+                                <label class="form-label col-5 col-form-label required">Sector</label>
+                                <div class="col">
+                                    <input type="" class="form-control" aria-describedby="" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- no. of beds and floor -->
+                        <div class="row row-cols-xl-3 flex-row">
+                            <div class="form-group mb-2 row">
+                                <label class="form-label col-5 col-form-label required">No of Bedrooms</label>
+                                <div class="col">
+                                    <input type="" class="form-control" aria-describedby="" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group mb-2 row">
+                                <label class="form-label col-5 col-form-label required">Floor</label>
+                                <div class="col">
+                                    <input type="" class="form-control" aria-describedby="" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- For Home and Residential Plots -->
+                        <div class="row row-cols-xl-3 flex-row">
+                            <div class="form-group mb-2 row">
+                                <label class="form-label col-5 col-form-label required">Area (marlas)</label>
+                                <div class="col">
+                                    <input type="" class="form-control" aria-describedby="" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group mb-2 row">
+                                <label class="form-label col-5 col-form-label required">Street</label>
+                                <div class="col">
+                                    <input type="" class="form-control" aria-describedby="" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group mb-2 row">
+                                <label class="form-label col-5 col-form-label required">Phase</label>
+                                <div class="col">
+                                    <input type="" class="form-control" aria-describedby="" placeholder="">
+                                </div>
+                            </div>
+
+                            <div></div>
+                            <div></div>
+                            <!-- generate units -->
+                            <div class="row align-items-center g-2">
+                                <div class="d-flex">
+                                    <button class="btn btn-info w-7 ms-auto">Generate Units</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- end -->
+
+                        <!-- list table of property unit details -->
+                        <div class="card-body">
+                            <div class="card">
+                                <div class="table-responsive">
+                                    <table class=" table table-vcenter table-mobile-md card-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Unit#</th>
+                                                <th>Category</th>
+                                                <th>Property Type</th>
+                                                <th>Sale Price</th>
+                                                <th>No of Bedrooms</th>
+                                                <th>Dimensions</th>
+                                                <th>Area (sq ft)</th>
+                                                <th>Area (marlas)</th>
+                                                <th>Floor</th>
+                                                <th>Street</th>
+                                                <th>Sector</th>
+                                                <th>Phase</th>
+                                                <th>Unit Description</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody class="fs-3">
+                                            <tr>
+                                                <td>10001020</td>
+                                                <td>SLR-001</td>
+                                                <td>Accounts</td>
+                                                <td>8093933033939</td>
+                                                <td>3033</td>
+                                                <td>3033</td>
+                                                <td>3033</td>
+                                                <td>3033</td>
+                                                <td>3033</td>
+                                                <td>3033</td>
+                                                <td>3033</td>
+                                                <td>3033</td>
+                                                <td>sami</td>
+                                                <td>23</td>
+
+                                                <td><a href="#" class="btn btn-sm btn-outline-danger">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                            class="icon icon-tabler icon-tabler-trash"
+                                                            width="24" height="24" viewBox="0 0 24 24"
+                                                            stroke-width="2" stroke="currentColor" fill="none"
+                                                            stroke-linecap="round" stroke-linejoin="round">
+
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none">
+                                                            </path>
+                                                            <line x1="4" y1="7" x2="20" y2="7"></line>
+                                                            <line x1="10" y1="11" x2="10" y2="17"></line>
+                                                            <line x1="14" y1="11" x2="14" y2="17"></line>
+                                                            <path
+                                                                d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12">
+                                                            </path>
+                                                            <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3">
+                                                            </path>
+                                                        </svg>
+                                                        Remove
+                                                    </a></td>
+
+                                            </tr>
+
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Footer post and submit button -->
+                        <div class="card-footer">
+                            <div class="d-flex">
+                                <button class="btn btn-primary ms-auto w-6">Submit</button>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+{% endblock %}
