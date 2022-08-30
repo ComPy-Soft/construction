@@ -1,13 +1,13 @@
 from django.shortcuts import render
 from django.urls import path
 
-def AddOpening(request):
+def add_opening(request):
     return render(request, 'Accounts/add_opening_voucher.html')
 
-def ManageOpening(request):
+def manage_opening(request):
     return render(request, 'Accounts/manage_opening_voucher.html')
 
 opening_templates = [
-    path('add_opening_voucher/', AddOpening,name='add_opening_voucher'),
-    path('manage_opening_voucher', ManageOpening,name='manage_opening_voucher'),
+    path('add_opening_voucher/', add_opening,name='add_opening_voucher'),
+    path('manage_opening_voucher/', manage_opening,name='manage_opening_voucher'),
     ]

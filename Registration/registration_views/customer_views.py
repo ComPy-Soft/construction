@@ -4,14 +4,14 @@ from django.urls import path
 
 ################################# Customer Registration ################################################
 
-def AddCustomer(request):
+def add_customer(request):
     return render(request, 'Registration/add_customers.html')
 
-def ManageCustomer(request):
+def manage_customer(request):
     return render(request, 'Registration/manage_customers.html')
 
 
 customer_template =[
-    path('add_customers/', AddCustomer, name='add_customers'),
-    path('manage_customers/', ManageCustomer, name='manage_customers'),
+    path('add_customers/', add_customer, name='add_customers'),
+    path('manage_customers/', manage_customer, name='manage_customers'),
 ]

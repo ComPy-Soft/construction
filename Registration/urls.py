@@ -1,22 +1,24 @@
-from .Views.indexViews import index
+
 from django.urls import path
 from itertools import chain
-from .Views.customerViews import customer_template
-from .Views.vendorViews import vendor_template
-from .Views.assestsViews import assests_template
-from .Views.bankAccountViews import bank_accounts_template
-from .Views.estateagentViews import estate_agent_template
-from .Views.wareHousesViews import warehouses_template
-from .Views.productTypesViews import product_types_template
-from .Views.productViews import product_template
-from .Views.usersViews import users_template
-from .Views.expenseViews import expense_types_template
-from .Views.taxesViews import taxes_template
+from .registration_views.assests_views import assests_template
+from .registration_views.taxes_views import taxes_template
+from .registration_views.users_views import users_template
+from .registration_views.index_views import index_template
+from .registration_views.customer_views import customer_template
+from .registration_views.estate_agent_views import estate_agent_template
+from .registration_views.expense_types_views import expense_types_template
+from .registration_views.product_types_views import product_types_template
+from .registration_views.product_views import product_template
+from .registration_views.vendor_views import vendor_template
+from .registration_views.ware_houses_views import ware_houses_template
+from .registration_views.bank_account_views import bank_account_template
+
 
 app_name = 'Registration'
 
-urlpatterns = list(chain([
-    path('', index, name='index'),
-],customer_template, vendor_template, assests_template,
-bank_accounts_template, estate_agent_template, warehouses_template,
-product_types_template, product_template, users_template, expense_types_template, taxes_template))
+urlpatterns = list(chain(assests_template, taxes_template,
+                        users_template, index_template, customer_template,
+                        estate_agent_template, expense_types_template,
+                        product_types_template, product_template,
+                        vendor_template, ware_houses_template, bank_account_template))

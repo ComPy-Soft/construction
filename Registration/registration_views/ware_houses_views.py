@@ -2,15 +2,15 @@ from django.shortcuts import render
 from django.urls import path
 
 ################################# Warehouses Registration ################################################
-def AddWarehouses(request):
+def add_ware_houses(request):
     return render(request, "Registration/add_warehouses.html")
 
 
-def ManageWarehouses(request):
+def manage_ware_houses(request):
     return render(request, "Registration/manage_warehouses.html")
 
 
-warehouses_template = [
-    path("add_warehouses/", AddWarehouses, name="add_warehouses"),
-    path("manage_warehouses/", ManageWarehouses, name="manage_warehouses"),
+ware_houses_template = [
+    path("add_warehouses/", add_ware_houses, name="add_warehouses"),
+    path("manage_warehouses/", manage_ware_houses, name="manage_warehouses"),
 ]

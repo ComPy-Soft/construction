@@ -1,13 +1,13 @@
 from django.shortcuts import render
 from django.urls import path
 ################################# Products Registration ################################################
-def AddProducts(request):
+def add_product(request):
     return render(request, 'Registration/add_products.html')
 
-def ManageProducts(request):
+def manage_product(request):
     return render(request, 'Registration/manage_products.html')
 
 product_template = [
-    path('add_products/', AddProducts, name='add_products'),
-    path('manage_products/', ManageProducts, name='manage_products'),
+    path('add_products/', add_product, name='add_products'),
+    path('manage_products/', manage_product, name='manage_products'),
 ]

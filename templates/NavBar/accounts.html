@@ -25,7 +25,7 @@
         <!-- Payment Vouchers -->
         <div class="dropend">
             <a class="dropdown-item dropdown-toggle {% if url_name in pages.PaymentVouchers %} active {%endif%}"
-                href="#payment-vouchers" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
                 aria-expanded="false">
                 Payment Vouchers
             </a>
@@ -35,13 +35,14 @@
                 </a>
                 <a href="{% url 'Accounts:manage_payment_voucher' %}" class="dropdown-item">
                     Manage Payment Vouchers
+                </a>
             </div>
         </div>
 
         <!-- Expense Vouchers -->
         <div class="dropend">
             <a class="dropdown-item dropdown-toggle {% if url_name in pages.ExpenseVouchers %} active {%endif%}"
-                href="#expense-vouchers" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
                 aria-expanded="false">
                 Expense Vouchers
             </a>
@@ -51,6 +52,7 @@
                 </a>
                 <a href="{% url 'Accounts:manage_expense_voucher' %}" class="dropdown-item">
                     Manage Expense Vouchers
+                </a>
             </div>
         </div>
 
@@ -67,6 +69,7 @@
                 </a>
                 <a href="{% url 'Accounts:manage_receipt_voucher' %}" class="dropdown-item">
                     Manage Receipt Vouchers
+                </a>
             </div>
         </div>
 
@@ -83,6 +86,7 @@
                 </a>
                 <a href="{% url 'Accounts:manage_opening_voucher' %}" class="dropdown-item">
                     Manage Opening Vouchers
+                </a>
             </div>
         </div>
 
@@ -99,6 +103,7 @@
                 </a>
                 <a href="{% url 'Accounts:manage_journal_voucher' %}" class="dropdown-item">
                     Manage Journal Vouchers
+                </a>
             </div>
         </div>
 
@@ -115,6 +120,7 @@
                 </a>
                 <a href="{% url 'Accounts:manage_debit_notes' %}" class="dropdown-item">
                     Manage Debit Notes
+                </a>
             </div>
         </div>
 
@@ -131,17 +137,23 @@
                 </a>
                 <a href="{% url 'Accounts:manage_bank_deposit_voucher' %}" class="dropdown-item">
                     Manage Bank Deposits
+                </a>
             </div>
         </div>
 
         <!-- Chart of Accounts -->
-        <div class="dropend">
-            <a class="dropdown-item dropdown-toggle {% if url_name in pages.ChartOfAccounts %} active {%endif%}"
+        <!-- <div class="dropend">
+            <a class=" dropdown-toggle {% if url_name in pages.ChartOfAccounts %} active {%endif%}"
                 href="{% url 'Accounts:chart_of_accounts' %}">
                 Chart of Accounts
             </a>
+            
 
-        </div>
+        </div> -->
+        <!-- Chart of Accounts -->
+        <a class="dropdown-item {% if url_name in pages.ChartOfAccounts %} active {%endif%}" href="{% url 'Accounts:chart_of_accounts' %}">
+            Chart of Accounts
+        </a>
     </div>
 
 </li>
