@@ -1,4 +1,4 @@
-<li class="nav-item dropdown">
+<li class="nav-item dropdown {% if url_name in pages.all_construction_pages %} active {%endif%}">
     <a class="nav-link dropdown-toggle" href="#construction" data-bs-toggle="dropdown"
         data-bs-auto-close="outside" role="button" aria-expanded="false">
         <span class="nav-link-icon d-md-none d-lg-inline-block">
@@ -28,27 +28,26 @@
             <div class="dropdown-menu-column">
 
                 <!-- Construction Notes -->
+                
                 <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#construction-notes"
-                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                        role="button" aria-expanded="false">
+                    <a class="dropdown-item dropdown-toggle {% if url_name in pages.constructionnotes %} active {%endif%}"
+                        href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button"
+                        aria-expanded="false">
                         Construction Notes
                     </a>
                     <div class="dropdown-menu">
-                        <a href="../Construction/manage_construction_note.html"
-                            class="dropdown-item">
-                            Manage Construction Notes
+                        <a href="{% url 'Construction:add_construction_note' %}" class="dropdown-item">
+                            Add Construction Notes
                         </a>
-                        <a href="../Construction/add_construction_note.html"
-                            class="dropdown-item">
+                        <a href="{% url 'Construction:manage_construction_note' %}" class="dropdown-item">
                             Add Construction Notes
                         </a>
                     </div>
                 </div>
 
                 <!-- Construction stage chart -->
-                <a class="dropdown-item"
-                    href="../Construction/construction_stage_chart.html">
+                <a class="dropdown-item {% if url_name in pages.constructionstagechart %} active {%endif%}"
+                    href="{% url 'Construction:construction_stage_chart' %}">
                     Construction Stage Chart
                 </a>
             </div>

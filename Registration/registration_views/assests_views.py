@@ -11,3 +11,4 @@ assests_template = [
     path('add_assets/',add_assests, name='add_assets'),
     path('manage_assets/', manage_assests, name='manage_assets'),
 ]
+

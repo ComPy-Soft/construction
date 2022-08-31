@@ -142,7 +142,7 @@ def pages(request):
         "manage_property_surcharge",
         "add_surcharge_waiver",
         "manage_surcharge_waiver",
-        "add_delete_property_sales",
+        "master_delete_property_sales",
         "upgrade_property_prices"
     ],
     "additionalcharges": [
@@ -194,10 +194,22 @@ def pages(request):
         "manage_surcharge_waiver"
     ],
     "deletepropertysales": [
-        "add_delete_property_sales"
+        "master_delete_property_sales",
     ],
     "upgradepropertyprices": [
         "upgrade_property_prices"
+    ],
+    "all_construction_pages":[
+        "add_construction_note",
+        "construction_stage_chart",
+        "manage_construction_note"
+    ],
+    "constructionnotes": [
+        "add_construction_note",
+        "manage_construction_note"
+    ],
+    "constructionstagechart": [
+        "construction_stage_chart"
     ]
 }
     return {"pages": Registration}

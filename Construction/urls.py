@@ -1,0 +1,8 @@
+from itertools import chain
+from .construction_views.construction_notes_views import construction_notes_templates
+from .construction_views.construction_stage_chart_views import construction_stage_chart_templates
+
+app_name = 'Construction'
+
+
+urlpatterns = list(chain(construction_notes_templates,construction_stage_chart_templates))
