@@ -1,4 +1,6 @@
-{%extends 'base.html'%}
+{%extends "base.html"%}
+
+
 {%block content%}
 <!-- Main Page -->
 <div class="page-wrapper">
@@ -6,7 +8,7 @@
         <!-- Page title -->
         <div class="page-header d-print-none">
             <h2 class="page-title">
-                Manage Installment Plans
+                Manage Agent Commissions
             </h2>
 
         </div>
@@ -19,7 +21,7 @@
                 <div class="card">
                     <div class="card-status-bottom bg-blue"></div>
                     <div class="card-header">
-                        <h3 class="card-title fs-2">Manage Installment Plans</h3>
+                        <h3 class="card-title fs-2">Manage Agent Commissions</h3>
                         <div class="card-actions">
                             <a href="" class="btn btn-outline-primary">
                                 <svg xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +33,7 @@
                                     <line x1="12" y1="5" x2="12" y2="19"></line>
                                     <line x1="5" y1="12" x2="19" y2="12"></line>
                                 </svg>
-                                Add Installment Plan
+                                Add Agent Commission
                             </a>
                             <a href="#" class="btn btn-outline-danger">
                                 <svg xmlns="http://www.w3.org/2000/svg"
@@ -165,10 +167,15 @@
                                         <tr class="">
                                             <th><input class="form-check-input" type="checkbox"
                                                     aria-label=""></th>
-                                            <th><button class="table-sort" data-sort="sort-name">Plan Name</button></th>
-                                            <th><button class="table-sort" data-sort="sort-name">Down Payment</button></th>
-                                            <th><button class="table-sort" data-sort="sort-name">Final Payment</button></th>
-                                            <th><button class="table-sort" data-sort="sort-name">Created On</button></th>
+                                            <th><button class="table-sort" data-sort="sort-name">Voucher</button></th>
+                                            <th><button class="table-sort" data-sort="sort-name">Voucher Date</button></th>
+                                            <th><button class="table-sort" data-sort="sort-name">Unit#</button></th>
+                                            <th><button class="table-sort" data-sort="sort-name">Customer</button></th>
+                                            <th><button class="table-sort" data-sort="sort-name">Agent Type</button></th>
+                                            <th><button class="table-sort" data-sort="sort-name">Agent Name</button></th>
+                                            <th><button class="table-sort" data-sort="sort-name">Commission%</button></th>
+                                            <th><button class="table-sort" data-sort="sort-name">Amount</button></th>
+                                            <th><button class="table-sort" data-sort="sort-name">Status</button>
                                             </th>
                                         </tr>
                                     </thead>
@@ -180,8 +187,14 @@
                                             </td>
                                             <td>PVNO. 001</td>
                                             <td>ada</td>
-                                            <td>ada</td>
                                             <td>22/22/2222</td>
+                                            <td>1221s</td>
+                                            <td>1,000</td>
+                                            <td>1,000</td>
+                                            <td>1,000</td>
+                                            <td>32320</td>
+                                            <td><span class="badge bg-blue me-1"></span>Posted</td>
+                                            <!-- <td><span class="badge bg-danger me-1"></span>Inactive</td> -->
                                         </tr>
 
 
@@ -226,6 +239,18 @@
                             </li>
 
                         </ul>
+                    </div>
+                </div>
+
+                <!-- Total k liye -->
+                <div class="card-footer mt-2">
+                    <div class="row row-cols-xl-2 flex-row">
+                        <div class="form-group row">
+                            <label class="form-label col-4 col-form-label">Total Commission Amount:</label>
+                            <div class="col">
+                                <input type="" class="form-control" aria-describedby="" placeholder="">
+                            </div>
+                        </div>
                     </div>
                 </div>
 

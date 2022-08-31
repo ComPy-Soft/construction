@@ -21,7 +21,7 @@
         "add_expense_types",
         "manage_expense_types",
         "add_warehouses",
-        "manage_warehouses",
+        "manage_warehouses"
     ],
     "customers": [
         "add_customers",
@@ -82,7 +82,7 @@
         "manage_journal_voucher",
         "manage_opening_voucher",
         "manage_payment_voucher",
-        "manage_receipt_voucher",
+        "manage_receipt_voucher"
     ],
     "PaymentVouchers": [
         "manage_payment_voucher",
