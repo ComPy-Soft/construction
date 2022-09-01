@@ -3,11 +3,11 @@ from django.urls import path
 
 ################################# Expense Types Registration ################################################
 def add_expense_types(request):
-    return render(request, "Registration/add_expense_types.html")
+    return render(request, "Registration/Expense_Types/add_expense_types.html")
 
 
 def manage_expense_types(request):
-    return render(request, "Registration/manage_expense_types.html")
+    return render(request, "Registration/Expense_Types/manage_expense_types.html")
 
 
 expense_types_template = [

@@ -2,10 +2,10 @@ from django.shortcuts import render
 from django.urls import path    
 
 def add_receipt(request):
-    return render(request, 'Accounts/add_receipt_voucher.html')
+    return render(request, 'Accounts/Receipt_Vouchers/add_receipt_voucher.html')
 
 def manage_receipt(request):
-    return render(request, 'Accounts/manage_receipt_voucher.html')
+    return render(request, 'Accounts/Receipt_Vouchers/manage_receipt_voucher.html')
 
 
 receipt_templates = [

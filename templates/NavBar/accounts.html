@@ -151,7 +151,9 @@
 
         </div> -->
         <!-- Chart of Accounts -->
-        <a class="dropdown-item {% if url_name in pages.ChartOfAccounts %} active {%endif%}" href="{% url 'Accounts:chart_of_accounts' %}">
+        <a class="dropdown-item 
+            {% if url_name in pages.ChartOfAccounts %} active {%endif%}" 
+            href="{% url 'Accounts:chart_of_accounts' %}">
             Chart of Accounts
         </a>
     </div>

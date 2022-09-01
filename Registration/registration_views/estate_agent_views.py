@@ -2,10 +2,10 @@ from django.shortcuts import render
 from django.urls import path
 ################################# Estate Agents Registration ################################################
 def add_estate_agent(request):
-    return render(request, 'Registration/add_estate_agents.html')
+    return render(request, 'Registration/Estate_Agents/add_estate_agents.html')
 
 def manage_estate_agent(request):
-    return render(request, 'Registration/manage_estate_agents.html')
+    return render(request, 'Registration/Estate_Agents/manage_estate_agents.html')
 
 
 estate_agent_template = [

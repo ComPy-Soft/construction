@@ -1,4 +1,4 @@
-<li class="nav-item dropdown">
+<li class="nav-item dropdown {% if url_name in pages.all_hr_pages %} active {%endif%}">
     <a class="nav-link dropdown-toggle" href="#hr" data-bs-toggle="dropdown"
         data-bs-auto-close="outside" role="button" aria-expanded="false">
         <span class="nav-link-icon d-md-none d-lg-inline-block">
@@ -24,16 +24,18 @@
 
                 <!-- Employees -->
                 <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#employees"
+                    <a class="dropdown-item dropdown-toggle 
+                        {% if url_name in pages.employees %} active {%endif%}" 
+                        href="#employees"
                         data-bs-toggle="dropdown" data-bs-auto-close="outside"
                         role="button" aria-expanded="false">
                         Employees
                     </a>
                     <div class="dropdown-menu">
-                        <a href="../HR/manage_employee.html" class="dropdown-item">
+                        <a href="{% url 'HR:manage_employee' %}" class="dropdown-item">
                             Manage Employees
                         </a>
-                        <a href="../HR/add_employee.html" class="dropdown-item">
+                        <a href="{% url 'HR:add_employee' %}" class="dropdown-item">
                             Add Employees
                         </a>
                     </div>
@@ -41,16 +43,18 @@
 
                 <!-- Salary Slips -->
                 <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#salary-slips"
+                    <a class="dropdown-item dropdown-toggle 
+                        {% if url_name in pages.salaryslips %} active {%endif%}" 
+                        href="#salary-slips"
                         data-bs-toggle="dropdown" data-bs-auto-close="outside"
                         role="button" aria-expanded="false">
                         Salary Slips
                     </a>
                     <div class="dropdown-menu">
-                        <a href="../HR/manage_salary_slips.html" class="dropdown-item">
+                        <a href="{% url 'HR:manage_salary_slips' %}" class="dropdown-item">
                             Manage Salary Slips
                         </a>
-                        <a href="../HR/add_salary_slip.html" class="dropdown-item">
+                        <a href="{% url 'HR:add_salary_slip' %}" class="dropdown-item">
                             Add Salary Slips
                         </a>
                     </div>
@@ -58,17 +62,19 @@
 
                 <!-- Employee Attendance -->
                 <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#employee-attendance"
+                    <a class="dropdown-item dropdown-toggle
+                        {% if url_name in pages.employeeattendance %} active {%endif%}"" 
+                        href="#employee-attendance"
                         data-bs-toggle="dropdown" data-bs-auto-close="outside"
                         role="button" aria-expanded="false">
                         Employee Attendance
                     </a>
                     <div class="dropdown-menu">
-                        <a href="../HR/manage_employee_attendance.html"
+                        <a href="{% url 'HR:manage_employee_attendance' %}"
                             class="dropdown-item">
                             Manage Employee Attendance
                         </a>
-                        <a href="../HR/add_employee_attendance.html"
+                        <a href="{% url 'HR:add_employee_attendance' %}"
                             class="dropdown-item">
                             Add Employee Attendance
                         </a>
@@ -77,17 +83,19 @@
 
                 <!-- Salary Structures -->
                 <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#salary-structures"
+                    <a class="dropdown-item dropdown-toggle
+                        {% if url_name in pages.salarystructures %} active {%endif%}""" 
+                        href="#salary-structures"
                         data-bs-toggle="dropdown" data-bs-auto-close="outside"
                         role="button" aria-expanded="false">
                         Salary Structures
                     </a>
                     <div class="dropdown-menu">
-                        <a href="../HR/manage_salary_structure.html"
+                        <a href="{% url 'HR:manage_salary_structure' %}"
                             class="dropdown-item">
                             Manage Salary Structures
                         </a>
-                        <a href="../HR/add_salary_structure.html" class="dropdown-item">
+                        <a href="{% url 'HR:add_salary_structure' %}" class="dropdown-item">
                             Add Salary Structures
                         </a>
                     </div>
@@ -95,16 +103,18 @@
 
                 <!-- Salary Heads -->
                 <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#salary-heads"
+                    <a class="dropdown-item dropdown-toggle
+                        {% if url_name in pages.salaryheads %} active {%endif%}" 
+                        href="#salary-heads"
                         data-bs-toggle="dropdown" data-bs-auto-close="outside"
                         role="button" aria-expanded="false">
                         Salary Heads
                     </a>
                     <div class="dropdown-menu">
-                        <a href="../HR/manage_salary_head.html" class="dropdown-item">
+                        <a href="{% url 'HR:manage_salary_head' %}" class="dropdown-item">
                             Manage Salary Heads
                         </a>
-                        <a href="../HR/add_salary_head.html" class="dropdown-item">
+                        <a href="{% url 'HR:add_salary_head' %}" class="dropdown-item">
                             Add Salary Heads
                         </a>
                     </div>
@@ -112,17 +122,19 @@
 
                 <!-- Loan Disbursements -->
                 <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#loan-disbursements"
+                    <a class="dropdown-item dropdown-toggle
+                        {% if url_name in pages.loandisbursements %} active {%endif%}"
+                        href="#loan-disbursements"
                         data-bs-toggle="dropdown" data-bs-auto-close="outside"
                         role="button" aria-expanded="false">
                         Loan Disbursements
                     </a>
                     <div class="dropdown-menu">
-                        <a href="../HR/manage_loan_disbursement.html"
+                        <a href="{% url 'HR:manage_loan_disbursement' %}"
                             class="dropdown-item">
                             Manage Loan Disbursements
                         </a>
-                        <a href="../HR/add_employee_loan_disbursement_voucher.html"
+                        <a href="{% url 'HR:add_employee_loan_disbursement_voucher' %}"
                             class="dropdown-item">
                             Add Loan Disbursements
                         </a>
@@ -131,16 +143,18 @@
 
                 <!-- Loan Receipts -->
                 <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#loan-receipts"
+                    <a class="dropdown-item dropdown-toggle
+                        {% if url_name in pages.loanreceipts %} active {%endif%}" 
+                        href="#loan-receipts"
                         data-bs-toggle="dropdown" data-bs-auto-close="outside"
                         role="button" aria-expanded="false">
                         Loan Receipts
                     </a>
                     <div class="dropdown-menu">
-                        <a href="../HR/manage_loan_receipt.html" class="dropdown-item">
+                        <a href="{% url 'HR:manage_loan_receipt' %}" class="dropdown-item">
                             Manage Loan Receipts
                         </a>
-                        <a href="../HR/add_employee_loan_payment_receipt.html"
+                        <a href="{% url 'HR:add_employee_loan_payment_receipt' %}"
                             class="dropdown-item">
                             Add Loan Receipts
                         </a>
@@ -148,22 +162,26 @@
                 </div>
 
                 <!-- Generate Payroll -->
-                <a class="dropdown-item" href="../HR/generate_pay_roll.html">
+                <a class="dropdown-item 
+                    {% if url_name in pages.generatepayroll %} active {%endif%}" 
+                    href="{% url 'HR:generate_pay_roll' %}">
                     Generate Payroll
                 </a>
 
                 <!-- Employee Notes -->
                 <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#employee-notes"
+                    <a class="dropdown-item dropdown-toggle
+                        {% if url_name in pages.employeenote %} active {%endif%}"" 
+                        href="#employee-notes"
                         data-bs-toggle="dropdown" data-bs-auto-close="outside"
                         role="button" aria-expanded="false">
                         Employee Notes
                     </a>
                     <div class="dropdown-menu">
-                        <a href="../HR/manage_employee_note.html" class="dropdown-item">
+                        <a href="{% url 'HR:manage_employee_note' %}" class="dropdown-item">
                             Manage Employee Notes
                         </a>
-                        <a href="../HR/add_employee_note.html" class="dropdown-item">
+                        <a href="{% url 'HR:add_employee_note' %}" class="dropdown-item">
                             Add Employee Notes
                         </a>
                     </div>

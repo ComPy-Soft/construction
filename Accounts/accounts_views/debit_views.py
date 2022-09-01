@@ -2,10 +2,10 @@ from django.shortcuts import render
 from django.urls import path
 
 def add_debit(request):
-    return render(request, 'Accounts/add_debit_notes.html')
+    return render(request, 'Accounts/Debit_Notes/add_debit_notes.html')
 
 def manage_debit(request):
-    return render(request, 'Accounts/manage_debit_notes.html')
+    return render(request, 'Accounts/Debit_Notes/manage_debit_notes.html')
 
 debit_templates = [
     path('add_debit_notes/', add_debit,name='add_debit_notes'),

@@ -2,11 +2,11 @@ from django.shortcuts import render
 from django.urls import path
 ################################# Taxes Registration ################################################
 def add_taxes(request):
-    return render(request, "Registration/add_taxes.html")
+    return render(request, "Registration/Taxes/add_taxes.html")
 
 
 def manage_taxes(request):
-    return render(request, "Registration/manage_taxes.html")
+    return render(request, "Registration/Taxes/manage_taxes.html")
 
 
 taxes_template = [

@@ -5,10 +5,10 @@ from django.urls import path
 ################################# Customer Registration ################################################
 
 def add_customer(request):
-    return render(request, 'Registration/add_customers.html')
+    return render(request, 'Registration/Customers/add_customers.html')
 
 def manage_customer(request):
-    return render(request, 'Registration/manage_customers.html')
+    return render(request, 'Registration/Customers/manage_customers.html')
 
 
 customer_template =[

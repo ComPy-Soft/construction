@@ -209,5 +209,161 @@
     ],
     "constructionstagechart": [
         "construction_stage_chart"
+    ],
+
+    "all_hr_pages": [
+        "add_employee_attendance",
+        "manage_employee_attendance",
+        "add_employee_note",
+        "manage_employee_note",
+        "add_employee",
+        "manage_employee",
+        "add_employee_loan_disbursement_voucher",
+        "manage_loan_disbursement",
+        "add_employee_loan_repayment_receipt",
+        "manage_loan_receipt",
+        "add_salary_head",
+        "manage_salary_head",
+        "add_salary_slip",
+        "manage_salary_slips",
+        "add_salary_structure",
+        "manage_salary_structure",
+        "generate_pay_roll"
+    ],
+    "employeeattendance": [
+        "add_employee_attendance",
+        "manage_employee_attendance"
+    ],
+    "employeenote": [
+        "add_employee_note",
+        "manage_employee_note"
+    ],
+    "employees": [
+        "add_employee",
+        "manage_employee"
+    ],
+    "loandisbursements": [
+        "add_employee_loan_disbursement_voucher",
+        "manage_loan_disbursement"
+    ],
+    "loanreceipts": [
+        "add_employee_loan_payment_receipt",
+        "manage_loan_receipt"
+    ],
+    "salaryheads": [
+        "add_salary_head",
+        "manage_salary_head"
+    ],
+    "salaryslips": [
+        "add_salary_slip",
+        "manage_salary_slips"
+    ],
+    "salarystructures": [
+        "add_salary_structure",
+        "manage_salary_structure"
+    ],
+    "generatepayroll": [
+        "generate_pay_roll"
+    ],
+
+    "all_reports_pages":[
+        "account_ledger",
+        "account_payables",
+        "account_receivables",
+        "balance_sheet_summary",
+        "balance_sheet",
+        "bank_ledger",
+        "customer_ledger",
+        "employee_commission_ledger",
+        "employee_ledger",
+        "estate_agent_ledger",
+        "general_ledger",
+        "profit_loss_statement",
+        "trial_balance",
+        "vendor_ledger",
+        "construction_ledger",
+        "delayed_construction_stages",
+        "breakage_report",
+        "inventory_consumed_value_wise",
+        "inventory_consumption",
+        "inventory_in_hand",
+        "inventory_ledger",
+        "inventory_procured_value_wise",
+        "inventory_report",
+        "inventory_value_wise",
+        "batch_analysis_report",
+        "pending_requisition_orders",
+        "pending_stock_for_purch_order",
+        "previous_requisition_actons",
+        "product_wise_purchase",
+        "requisition_order_status",
+        "vendor_wise_purchase",
+        "customer_properties_summary",
+        "due_installments",
+        "late_installments",
+        "outstanding_additional_charges",
+        "outstanding_installments",
+        "payment_collection",
+        "property_wise_due",
+        "property_wise_outstandings",
+        "sales_property_statement",
+        "sales_with_full_payment"
+    ],
+    "accounts": [
+        "account_ledger",
+        "account_payables",
+        "account_receivables",
+        "balance_sheet_summary",
+        "balance_sheet",
+        "bank_ledger",
+        "customer_ledger",
+        "employee_commission_ledger",
+        "employee_ledger",
+        "estate_agent_ledger",
+        "general_ledger",
+        "profit_loss_statement",
+        "trial_balance",
+        "vendor_ledger"
+    ],
+    "construction": [
+        "construction_ledger",
+        "delayed_construction_stages"
+    ],
+    "inventory": [
+        "breakage_report",
+        "inventory_consumed_value_wise",
+        "inventory_consumption",
+        "inventory_in_hand",
+        "inventory_ledger",
+        "inventory_procured_value_wise",
+        "inventory_report",
+        "inventory_value_wise"
+    ],
+    "purchases": [
+        "batch_analysis_report",
+        "pending_requisition_orders",
+        "pending_stock_for_purch_order",
+        "previous_requisition_actons",
+        "product_wise_purchase",
+        "requisition_order_status",
+        "vendor_wise_purchase"
+    ],
+    "sales": [
+        "customer_properties_summary",
+        "due_installments",
+        "late_installments",
+        "outstanding_additional_charges",
+        "outstanding_installments",
+        "payment_collection",
+        "property_wise_due",
+        "property_wise_outstandings",
+        "sales_property_statement",
+        "sales_with_full_payment"
+    ],
+
+    "all_sms_pages": [
+        "generate_sms",
+        "manage_sms",
+        "sms_settings"
     ]
 }

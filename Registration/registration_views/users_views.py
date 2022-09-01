@@ -3,11 +3,11 @@ from django.urls import path
 
 ################################# Users Registration ################################################
 def add_users(request):
-    return render(request, "Registration/add_users.html")
+    return render(request, "Registration/Users/add_users.html")
 
 
 def manage_users(request):
-    return render(request, "Registration/manage_users.html")
+    return render(request, "Registration/Users/manage_users.html")
 
 
 users_template = [

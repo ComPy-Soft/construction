@@ -2,10 +2,10 @@ from django.shortcuts import render
 from django.urls import path
 
 def add_payment(request):
-    return render(request, 'Accounts/add_payment_voucher.html')
+    return render(request, 'Accounts/Payment_Vouchers/add_payment_voucher.html')
 
 def manage_payment(request):
-    return render(request, 'Accounts/manage_payment_voucher.html')
+    return render(request, 'Accounts/Payment_Vouchers/manage_payment_voucher.html')
 
 
 payment_templates = [

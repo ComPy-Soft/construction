@@ -3,11 +3,11 @@ from django.urls import path
 
 ################################# Warehouses Registration ################################################
 def add_ware_houses(request):
-    return render(request, "Registration/add_warehouses.html")
+    return render(request, "Registration/Warehouses/add_warehouses.html")
 
 
 def manage_ware_houses(request):
-    return render(request, "Registration/manage_warehouses.html")
+    return render(request, "Registration/Warehouses/manage_warehouses.html")
 
 
 ware_houses_template = [
