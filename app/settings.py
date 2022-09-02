@@ -52,6 +52,8 @@ INSTALLED_APPS = [
     'Sales',
     'Construction',
     'HR',
+    'Reports',
+    'SMS'
 ]
 TEMPLATE_LOADERS = (
     'django.template.loaders.app_directories.load_template_source',

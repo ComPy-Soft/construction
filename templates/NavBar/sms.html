@@ -1,4 +1,4 @@
-<li class="nav-item dropdown">
+<li class="nav-item dropdown {% if url_name in pages.all_sms_pages %} active {%endif%}">
     <a class="nav-link dropdown-toggle" href="#sms" data-bs-toggle="dropdown"
         data-bs-auto-close="outside" role="button" aria-expanded="false">
         <span class="nav-link-icon d-md-none d-lg-inline-block">
@@ -24,19 +24,21 @@
 
                 <!-- sms -pages- -->
                 <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#sms"
+                    <a class="dropdown-item dropdown-toggle
+                        {% if url_name in pages.sms %} active {%endif%}"" 
+                        href="#sms"
                         data-bs-toggle="dropdown" data-bs-auto-close="outside"
                         role="button" aria-expanded="false">
                         SMS
                     </a>
                     <div class="dropdown-menu">
-                        <a href="" class="dropdown-item">
+                        <a href="{% url 'SMS:generate_sms' %}" class="dropdown-item">
                             Manage SMS
                         </a>
-                        <a href="" class="dropdown-item">
+                        <a href="{% url 'SMS:manage_sms' %}" class="dropdown-item">
                             Generate SMS
                         </a>
-                        <a href="" class="dropdown-item">
+                        <a href="{% url 'SMS:sms_settings' %}" class="dropdown-item">
                             SMS Settings
                         </a>
                     </div>

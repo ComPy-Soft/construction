@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.urls import path
 
+
+################################# Add & Manage Salary Structure ################################################
 def add_salary_structure(request):
     return render(request, 'HR/Salary_Structures/add_salary_structure.html')
 

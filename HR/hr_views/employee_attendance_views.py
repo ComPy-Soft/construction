@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.urls import path
 
+
+################################# Add & Manage Employee Attendance ################################################
 def add_employee_attendance(request):
     return render(request, 'HR/Employee_Attendance/add_employee_attendance.html')
 

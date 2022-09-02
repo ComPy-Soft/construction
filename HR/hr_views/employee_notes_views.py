@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.urls import path
 
+
+################################# Add & Manage Employee's Notes ################################################
 def add_employee_notes(request):
     return render(request, 'HR/Employee_Notes/add_employee_note.html')
 

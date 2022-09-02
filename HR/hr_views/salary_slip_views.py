@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.urls import path
 
+
+################################# Add & Manage Salary Slip ################################################
 def add_salary_slip(request):
     return render(request, 'HR/Salary_Slips/add_salary_slip.html')
 

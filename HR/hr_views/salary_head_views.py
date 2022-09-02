@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.urls import path
 
 
+################################# Add & Manage Salary Head ################################################
 def add_salary_head(request):
     return render(request, 'HR/Salary_Heads/add_salary_head.html')
 

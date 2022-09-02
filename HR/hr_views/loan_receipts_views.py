@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.urls import path
 
+
+################################# Add & Manage Loan Receipt ################################################
 def add_loan_receipt(request):
     return render(request, 'HR/Loan_Receipts/add_employee_loan_payment_receipt.html')
 

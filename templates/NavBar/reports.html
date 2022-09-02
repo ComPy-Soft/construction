@@ -1,4 +1,4 @@
-<li class="nav-item dropdown">
+<li class="nav-item dropdown {% if url_name in pages.all_reports_pages %} active {%endif%}">
     <a class="nav-link dropdown-toggle" href="#reports" data-bs-toggle="dropdown"
         data-bs-auto-close="outside" role="button" aria-expanded="false">
         <span class="nav-link-icon d-md-none d-lg-inline-block">
@@ -25,57 +25,59 @@
 
                 <!-- Accounts -->
                 <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#accounts"
+                    <a class="dropdown-item dropdown-toggle
+                        {% if url_name in pages.accounts %} active {%endif%}" 
+                        href="#accounts"
                         data-bs-toggle="dropdown" data-bs-auto-close="outside"
                         role="button" aria-expanded="false">
                         Accounts
                     </a>
                     <div class="dropdown-menu">
-                        <a href="../Reports/general_ledger.html" class="dropdown-item">
+                        <a href="{% url 'Reports:general_ledger' %}" class="dropdown-item">
                             General Ledger
                         </a>
-                        <a href="../Reports/customer_ledger.html" class="dropdown-item">
+                        <a href="{% url 'Reports:customer_ledger' %}" class="dropdown-item">
                             Customer Ledger
                         </a>
-                        <a href="../Reports/estate_agent_ledger.html"
+                        <a href="{% url 'Reports:estate_agent_ledger' %}"
                             class="dropdown-item">
                             Estate Agent Ledger
                         </a>
-                        <a href="../Reports/employee_commission_ledger.html"
+                        <a href="{% url 'Reports:employee_commission_ledger' %}"
                             class="dropdown-item">
                             Employee Commission Ledger
                         </a>
-                        <a href="../Reports/vendor_ledger.html" class="dropdown-item">
+                        <a href="{% url 'Reports:vendor_ledger' %}" class="dropdown-item">
                             Vender Ledger
                         </a>
-                        <a href="../Reports/account_ledger.html" class="dropdown-item">
+                        <a href="{% url 'Reports:account_ledger' %}" class="dropdown-item">
                             Account Ledger
                         </a>
-                        <a href="../Reports/bank_ledger.html" class="dropdown-item">
+                        <a href="{% url 'Reports:bank_ledger' %}" class="dropdown-item">
                             Bank Ledger
                         </a>
-                        <a href="../Reports/employee_ledger.html" class="dropdown-item">
+                        <a href="{% url 'Reports:employee_ledger' %}" class="dropdown-item">
                             Employee Ledger
                         </a>
-                        <a href="../Reports/account_receivables.html"
+                        <a href="{% url 'Reports:account_receivables' %}"
                             class="dropdown-item">
                             Account Receivables
                         </a>
-                        <a href="../Reports/account_payables.html"
+                        <a href="{% url 'Reports:account_payables' %}"
                             class="dropdown-item">
                             Account Payables
                         </a>
-                        <a href="../Reports/trial_balance.html" class="dropdown-item">
+                        <a href="{% url 'Reports:trial_balance' %}" class="dropdown-item">
                             Trial Balance
                         </a>
-                        <a href="../Reports/balance_sheet.html" class="dropdown-item">
+                        <a href="{% url 'Reports:balance_sheet' %}" class="dropdown-item">
                             Balance Sheet
                         </a>
-                        <a href="../Reports/balance_sheet_summary.html"
+                        <a href="{% url 'Reports:balance_sheet_summary' %}"
                             class="dropdown-item">
                             Balance Sheet Summary
                         </a>
-                        <a href="../Reports/profit_loss_statement.html"
+                        <a href="{% url 'Reports:profit_loss_statement' %}"
                             class="dropdown-item">
                             Profit and Loss Statement
                         </a>
@@ -85,40 +87,42 @@
 
                 <!-- Inventory -->
                 <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#inventory"
+                    <a class="dropdown-item dropdown-toggle
+                        {% if url_name in pages.inventory %} active {%endif%}" 
+                        href="#inventory"
                         data-bs-toggle="dropdown" data-bs-auto-close="outside"
                         role="button" aria-expanded="false">
                         Inventory
                     </a>
                     <div class="dropdown-menu">
-                        <a href="../Reports/inventory_report.html"
+                        <a href="{% url 'Reports:inventory_report' %}"
                             class="dropdown-item">
                             Inventory Report
                         </a>
-                        <a href="../Reports/inventory_in_hand.html"
+                        <a href="{% url 'Reports:inventory_in_hand' %}"
                             class="dropdown-item">
                             Inventory In Hand
                         </a>
-                        <a href="../Reports/inventory_ledger.html"
+                        <a href="{% url 'Reports:inventory_ledger' %}"
                             class="dropdown-item">
                             Inventory Ledger
                         </a>
-                        <a href="../Reports/inventory_value_wise.html"
+                        <a href="{% url 'Reports:inventory_value_wise' %}"
                             class="dropdown-item">
                             Inventory Report Value Wise
                         </a>
-                        <a href="../Reports/breakage_report.html" class="dropdown-item">
+                        <a href="{% url 'Reports:breakage_report' %}" class="dropdown-item">
                             Breakage Report
                         </a>
-                        <a href="../Reports/inventory_consumption.html"
+                        <a href="{% url 'Reports:inventory_consumption' %}"
                             class="dropdown-item">
                             Inventory Consumption
                         </a>
-                        <a href="../Reports/inventory_procured_value_wise.html"
+                        <a href="{% url 'Reports:inventory_procured_value_wise' %}"
                             class="dropdown-item">
                             Inventory Procured Value Wise
                         </a>
-                        <a href="../Reports/inventory_consumed_value_wise.html"
+                        <a href="{% url 'Reports:inventory_consumed_value_wise' %}"
                             class="dropdown-item">
                             Inventory Consumed Value Wise
                         </a>
@@ -127,49 +131,51 @@
 
                 <!-- Sales -->
                 <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#sales"
+                    <a class="dropdown-item dropdown-toggle
+                        {% if url_name in pages.sales %} active {%endif%}" 
+                        href="#sales"
                         data-bs-toggle="dropdown" data-bs-auto-close="outside"
                         role="button" aria-expanded="false">
                         Sales
                     </a>
                     <div class="dropdown-menu">
-                        <a href="../Reports/sales_property_statement.html"
+                        <a href="{% url 'Reports:sales_property_statement' %}"
                             class="dropdown-item">
                             Property Statement
                         </a>
-                        <a href="../Reports/customer_properties_summary.html"
+                        <a href="{% url 'Reports:customer_properties_summary' %}"
                             class="dropdown-item">
                             Customer Properties Summary
                         </a>
-                        <a href="../Reports/property_wise_outstandings.html"
+                        <a href="{% url 'Reports:property_wise_outstandings' %}"
                             class="dropdown-item">
                             Property Wise Outstandings
                         </a>
-                        <a href="../Reports/due_installments.html"
+                        <a href="{% url 'Reports:due_installments' %}"
                             class="dropdown-item">
                             Due Installments
                         </a>
-                        <a href="../Reports/property_wise_due.html"
+                        <a href="{% url 'Reports:property_wise_due' %}"
                             class="dropdown-item">
                             Property Wise Due
                         </a>
-                        <a href="../Reports/outstanding_installments.html"
+                        <a href="{% url 'Reports:outstanding_installments' %}"
                             class="dropdown-item">
                             Outstanding Installments
                         </a>
-                        <a href="../Reports/late_installments.html"
+                        <a href="{% url 'Reports:late_installments' %}"
                             class="dropdown-item">
                             Late Installments Report
                         </a>
-                        <a href="../Reports/sales_with_full_payment.html"
+                        <a href="{% url 'Reports:sales_with_full_payment' %}"
                             class="dropdown-item">
                             Sales With Full Payments
                         </a>
-                        <a href="../Reports/outstanding_additional_charges.html"
+                        <a href="{% url 'Reports:outstanding_additional_charges' %}"
                             class="dropdown-item">
                             Outstanding Additionals
                         </a>
-                        <a href="../Reports/payment_collection.html"
+                        <a href="{% url 'Reports:payment_collection' %}"
                             class="dropdown-item">
                             Payment Collection
                         </a>
@@ -179,37 +185,39 @@
 
                 <!-- Purchases -->
                 <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#purchases"
+                    <a class="dropdown-item dropdown-toggle
+                        {% if url_name in pages.purchases %} active {%endif%}" 
+                        href="#purchases"
                         data-bs-toggle="dropdown" data-bs-auto-close="outside"
                         role="button" aria-expanded="false">
                         Purchases
                     </a>
                     <div class="dropdown-menu">
-                        <a href="../Reports/product_wise_purchase.html"
+                        <a href="{% url 'Reports:product_wise_purchase' %}"
                             class="dropdown-item">
                             Product Wise Purchase
                         </a>
-                        <a href="../Reports/pending_requisition_orders.html"
+                        <a href="{% url 'Reports:pending_requisition_orders' %}"
                             class="dropdown-item">
                             Pending Requisition Orders
                         </a>
-                        <a href="../Reports/previous_requisition_actions.html"
+                        <a href="{% url 'Reports:previous_requisition_actions' %}"
                             class="dropdown-item">
                             Previous Requisition Actions
                         </a>
-                        <a href="../Reports/requisition_order_status.html"
+                        <a href="{% url 'Reports:requisition_order_status' %}"
                             class="dropdown-item">
                             Requisition Order Status
                         </a>
-                        <a href="../Reports/vendor_wise_purchase.html"
+                        <a href="{% url 'Reports:vendor_wise_purchase' %}"
                             class="dropdown-item">
                             Vendor Wise Purchase
                         </a>
-                        <a href="../Reports/pending_stock_for_purch_order.html"
+                        <a href="{% url 'Reports:pending_stock_for_purch_order' %}"
                             class="dropdown-item">
                             Pending Stock For PO
                         </a>
-                        <a href="../Reports/batch_analysis_report.html"
+                        <a href="{% url 'Reports:batch_analysis_report' %}"
                             class="dropdown-item">
                             Batch Analysis Report
                         </a>
@@ -219,17 +227,19 @@
 
                 <!-- Construction -->
                 <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#construction"
+                    <a class="dropdown-item dropdown-toggle
+                        {% if url_name in pages.construction %} active {%endif%}" 
+                        href="#construction"
                         data-bs-toggle="dropdown" data-bs-auto-close="outside"
                         role="button" aria-expanded="false">
                         Construction
                     </a>
                     <div class="dropdown-menu">
-                        <a href="../Reports/delayed_construction_stages.html"
+                        <a href="{% url 'Reports:delayed_construction_stages' %}"
                             class="dropdown-item">
                             Delayed Construction Stages
                         </a>
-                        <a href="../Reports/construction_ledger.html"
+                        <a href="{% url 'Reports:construction_ledger' %}"
                             class="dropdown-item">
                             Construction Ledger
                         </a>

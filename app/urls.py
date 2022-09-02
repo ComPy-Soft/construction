@@ -23,4 +23,6 @@ urlpatterns = [
     path('',include('Sales.urls')),
     path('',include('Construction.urls')),
     path('',include('HR.urls')),
+    path('',include('Reports.urls')),
+    path('',include('SMS.urls')),
 ]

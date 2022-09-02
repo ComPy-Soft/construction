@@ -295,7 +295,7 @@ def pages(request):
         "batch_analysis_report",
         "pending_requisition_orders",
         "pending_stock_for_purch_order",
-        "previous_requisition_actons",
+        "previous_requisition_actions",
         "product_wise_purchase",
         "requisition_order_status",
         "vendor_wise_purchase",
@@ -344,7 +344,7 @@ def pages(request):
         "batch_analysis_report",
         "pending_requisition_orders",
         "pending_stock_for_purch_order",
-        "previous_requisition_actons",
+        "previous_requisition_actions",
         "product_wise_purchase",
         "requisition_order_status",
         "vendor_wise_purchase"
@@ -363,6 +363,11 @@ def pages(request):
     ],
 
     "all_sms_pages": [
+        "generate_sms",
+        "manage_sms",
+        "sms_settings"
+    ],
+    "sms": [
         "generate_sms",
         "manage_sms",
         "sms_settings"

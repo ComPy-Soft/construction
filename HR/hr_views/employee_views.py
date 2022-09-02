@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.urls import path
 
+
+################################# Add & Manage Employee ################################################
 def add_employee(request):
     return render(request, 'HR/Employees/add_employee.html')
 
