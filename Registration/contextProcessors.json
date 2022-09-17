@@ -1,4 +1,5 @@
-{
+def pages(request):
+    Registration = {
     "all_registration_pages": [
         "add_customers",
         "manage_customers",
@@ -21,7 +22,7 @@
         "add_expense_types",
         "manage_expense_types",
         "add_warehouses",
-        "manage_warehouses"
+        "manage_warehouses",
     ],
     "customers": [
         "add_customers",
@@ -82,7 +83,7 @@
         "manage_journal_voucher",
         "manage_opening_voucher",
         "manage_payment_voucher",
-        "manage_receipt_voucher"
+        "manage_receipt_voucher",
     ],
     "PaymentVouchers": [
         "manage_payment_voucher",
@@ -193,19 +194,19 @@
         "manage_surcharge_waiver"
     ],
     "deletepropertysales": [
-        "master_delete_property_sales"
+        "master_delete_property_sales",
     ],
     "upgradepropertyprices": [
         "upgrade_property_prices"
     ],
     "all_construction_pages":[
-        "add_construction_notes",
+        "add_construction_note",
         "construction_stage_chart",
-        "manage_construction_notes"
+        "manage_construction_note"
     ],
     "constructionnotes": [
-        "add_construction_notes",
-        "manage_construction_notes"
+        "add_construction_note",
+        "manage_construction_note"
     ],
     "constructionstagechart": [
         "construction_stage_chart"
@@ -218,7 +219,7 @@
         "manage_employee_note",
         "add_employee",
         "manage_employee",
-        "add_employee_loan_disbursement_voucher",
+        "add_employee_loan_disbursement",
         "manage_loan_disbursement",
         "add_employee_loan_repayment_receipt",
         "manage_loan_receipt",
@@ -243,7 +244,7 @@
         "manage_employee"
     ],
     "loandisbursements": [
-        "add_employee_loan_disbursement_voucher",
+        "add_employee_loan_disbursement",
         "manage_loan_disbursement"
     ],
     "loanreceipts": [
@@ -370,5 +371,55 @@
         "generate_sms",
         "manage_sms",
         "sms_settings"
-    ]
+    ],
+
+    "all_purchases_pages": [
+        "add_inventory_out_voucher",
+        "manage_inventory_out_voucher",
+        "add_purchase_order_cancel",
+        "manage_purchase_order_cancel",
+        "add_purchase_order",
+        "manage_purchase_orders",
+        "add_purchse_return",
+        "manage_purchase_returns",
+        "add_requisition_approval",
+        "manage_requisition_approval",
+        "add_requisition_order",
+        "manage_requisition_orders",
+        "add_stock_receiving_voucher",
+        "manage_stock_receiving_voucher",
+        "requisition_approval_action_list",
+    ],
+    "inventoryoutvoucher": [
+        "add_inventory_out_voucher",
+        "manage_inventory_out_voucher"
+    ],
+    "purchaseordercancel": [
+        "add_purchase_order_cancel",
+        "manage_purchase_order_cancel"
+    ],
+    "purchaseorder": [
+        "add_purchase_order",
+        "manage_purchase_orders"
+    ],
+    "purchasereturn": [
+        "add_purchse_return",
+        "manage_purchase_returns"
+    ],
+    "requisitionapproval": [
+        "add_requisition_approval",
+        "manage_requisition_approval"
+    ],
+    "requisitionorder": [
+        "add_requisition_order",
+        "manage_requisition_orders"
+    ],
+    "stockreceivingvoucher": [
+        "add_stock_receiving_voucher",
+        "manage_stock_receiving_voucher"
+    ],
+    "requisitionapprovalactionlist": [
+        "requisition_approval_action_list"
+    ],
 }
+    return {"pages": Registration}

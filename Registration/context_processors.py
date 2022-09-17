@@ -371,6 +371,55 @@ def pages(request):
         "generate_sms",
         "manage_sms",
         "sms_settings"
-    ]
+    ],
+
+    "all_purchases_pages": [
+        'add_inventory_out_voucher',
+        'manage_inventory_out_voucher',
+        'add_purchase_order_cancel',
+        'manage_purchase_order_cancel',
+        'add_purchase_order',
+        'manage_purchase_orders',
+        'add_purchase_return',
+        'manage_purchase_returns',
+        'add_requisition_approval',
+        'manage_requisition_approval',
+        'add_requisition_order',
+        'manage_requisition_order',
+        'add_stock_receiving_voucher',
+        'manage_stock_voucher',
+        "requisition_approval_action_list",
+    ],
+    "inventoryoutvoucher": [
+        'add_inventory_out_voucher',
+        'manage_inventory_out_voucher'
+    ],
+    "purchaseordercancel": [
+        'add_purchase_order_cancel',
+        'manage_purchase_order_cancel'
+    ],
+    "purchaseorder": [
+        'add_purchase_order',
+        'manage_purchase_orders'
+    ],
+    "purchasereturn": [
+        'add_purchase_return',
+        'manage_purchase_returns'
+    ],
+    "requisitionapproval": [
+        'add_requisition_approval',
+        'manage_requisition_approval'
+    ],
+    "requisitionorder": [
+        'add_requisition_order',
+        'manage_requisition_order'
+    ],
+    "stockreceivingvoucher": [
+        'add_stock_receiving_voucher',
+        'manage_stock_voucher'
+    ],
+    "requisitionapprovalactionlist": [
+        "requisition_approval_action_list"
+    ],
 }
     return {"pages": Registration}

@@ -1,4 +1,4 @@
-<li class="nav-item dropdown">
+<li class="nav-item dropdown {% if url_name in pages.all_purchases_pages %} active {%endif%}">
     <a class="nav-link dropdown-toggle" href="#purchases" data-bs-toggle="dropdown"
         data-bs-auto-close="outside" role="button" aria-expanded="false">
         <span class="nav-link-icon d-md-none d-lg-inline-block">
@@ -24,18 +24,18 @@
 
                 <!-- Purchase Orders -->
                 <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#purchase-orders"
+                    <a class="dropdown-item dropdown-toggle 
+                        {% if url_name in pages.purchaseorder %} active {%endif%}" 
+                        href="#purchase-orders"
                         data-bs-toggle="dropdown" data-bs-auto-close="outside"
                         role="button" aria-expanded="false">
                         Purchase Orders
                     </a>
                     <div class="dropdown-menu">
-                        <a href="../Purchases/manage_purchase_orders.html"
-                            class="dropdown-item">
+                        <a href="{% url 'Purchases:manage_purchase_orders' %}" class="dropdown-item">
                             Manage Purchase Orders
                         </a>
-                        <a href="../Purchases/add_purchases_order.html"
-                            class="dropdown-item">
+                        <a href="{% url 'Purchases:add_purchase_order' %}" class="dropdown-item">
                             Add Purchase Orders
                         </a>
                     </div>
@@ -43,38 +43,37 @@
 
                 <!-- PO Cancellations -->
                 <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle"
-                        href="#purchase-order-cancellations" data-bs-toggle="dropdown"
-                        data-bs-auto-close="outside" role="button"
-                        aria-expanded="false">
-                        PO Cancellations
+                    <a class="dropdown-item dropdown-toggle 
+                        {% if url_name in pages.purchaseordercancel %} active {%endif%}" 
+                        href="#purchase-order-cancellations"
+                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                        role="button" aria-expanded="false">
+                        Purchase Order Cancellations
                     </a>
                     <div class="dropdown-menu">
-                        <a href="../Purchases/manage_purchase_order_cancel.html"
-                            class="dropdown-item">
-                            Manage PO Cancellations
+                        <a href="{% url 'Purchases:manage_purchase_order_cancel' %}" class="dropdown-item">
+                            Manage Purchase Order Cancellations
                         </a>
-                        <a href="../Purchases/add_purchase_order_cancel.html"
-                            class="dropdown-item">
-                            Add PO Cancellations
+                        <a href="{% url 'Purchases:add_purchase_order_cancel' %}" class="dropdown-item">
+                            Add Purchase Order Cancellations
                         </a>
                     </div>
                 </div>
 
                 <!-- Stock Vouchers -->
                 <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#stock-vouchers"
+                    <a class="dropdown-item dropdown-toggle 
+                        {% if url_name in pages.stockreceivingvoucher %} active {%endif%}" 
+                        href="#stock-vouchers"
                         data-bs-toggle="dropdown" data-bs-auto-close="outside"
                         role="button" aria-expanded="false">
                         Stock Vouchers
                     </a>
                     <div class="dropdown-menu">
-                        <a href="../Purchases/manage_stock_vouchers.html"
-                            class="dropdown-item">
+                        <a href="{% url 'Purchases:manage_stock_voucher' %}" class="dropdown-item">
                             Manage Stock Vouchers
                         </a>
-                        <a href="../Purchases/add_stock_receiving_voucher.html"
-                            class="dropdown-item">
+                        <a href="{% url 'Purchases:add_stock_receiving_voucher' %}" class="dropdown-item">
                             Add Stock Vouchers
                         </a>
                     </div>
@@ -82,18 +81,18 @@
 
                 <!-- Purchase Returns -->
                 <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#purchase-returns"
+                    <a class="dropdown-item dropdown-toggle 
+                        {% if url_name in pages.purchasereturn %} active {%endif%}" 
+                        href="#purchase-returns"
                         data-bs-toggle="dropdown" data-bs-auto-close="outside"
                         role="button" aria-expanded="false">
                         Purchase Returns
                     </a>
                     <div class="dropdown-menu">
-                        <a href="../Purchases/manage_purchase_returns.html"
-                            class="dropdown-item">
+                        <a href="{% url 'Purchases:manage_purchase_returns' %}" class="dropdown-item">
                             Manage Purchase Returns
                         </a>
-                        <a href="../Purchases/add_purchase_return.html"
-                            class="dropdown-item">
+                        <a href="{% url 'Purchases:add_purchase_return' %}" class="dropdown-item">
                             Add Purchase Returns
                         </a>
                     </div>
@@ -101,19 +100,18 @@
 
                 <!-- Inventory Out Vouchers -->
                 <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle"
-                        href="#inventory-out-vouchers" data-bs-toggle="dropdown"
-                        data-bs-auto-close="outside" role="button"
-                        aria-expanded="false">
+                    <a class="dropdown-item dropdown-toggle 
+                        {% if url_name in pages.inventoryoutvoucher %} active {%endif%}" 
+                        href="#inventory-out-vouchers"
+                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                        role="button" aria-expanded="false">
                         Inventory Out Vouchers
                     </a>
                     <div class="dropdown-menu">
-                        <a href="../Purchases/manage_inventory_out_voucher.html"
-                            class="dropdown-item">
+                        <a href="{% url 'Purchases:manage_inventory_out_voucher' %}" class="dropdown-item">
                             Manage Inventory Out Vouchers
                         </a>
-                        <a href="../Purchases/add_inventory_out_voucher.html"
-                            class="dropdown-item">
+                        <a href="{% url 'Purchases:add_inventory_out_voucher' %}" class="dropdown-item">
                             Add Inventory Out Vouchers
                         </a>
                     </div>
@@ -121,18 +119,18 @@
 
                 <!-- Requisition Orders -->
                 <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#requisition-orders"
+                    <a class="dropdown-item dropdown-toggle 
+                        {% if url_name in pages.requisitionorder %} active {%endif%}" 
+                        href="#requisition-orders"
                         data-bs-toggle="dropdown" data-bs-auto-close="outside"
                         role="button" aria-expanded="false">
                         Requisition Orders
                     </a>
                     <div class="dropdown-menu">
-                        <a href="../Purchases/manage_requisition_order.html"
-                            class="dropdown-item">
+                        <a href="{% url 'Purchases:manage_requisition_order' %}" class="dropdown-item">
                             Manage Requisition Orders
                         </a>
-                        <a href="../Purchases/add_requisition_order.html"
-                            class="dropdown-item">
+                        <a href="{% url 'Purchases:add_requisition_order' %}" class="dropdown-item">
                             Add Requisition Orders
                         </a>
                     </div>
@@ -140,29 +138,30 @@
 
                 <!-- Requisition Approvels -->
                 <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle"
-                        href="#requisition-approvels" data-bs-toggle="dropdown"
-                        data-bs-auto-close="outside" role="button"
-                        aria-expanded="false">
-                        Requisition Approvels
+                    <a class="dropdown-item dropdown-toggle 
+                        {% if url_name in pages.requisitionapproval %} active {%endif%}" 
+                        href="#requisition-approvals"
+                        data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                        role="button" aria-expanded="false">
+                        Requisition Approvals
                     </a>
                     <div class="dropdown-menu">
-                        <a href="../Purchases/manage_requisition_approval.html"
-                            class="dropdown-item">
-                            Manage Requisition Approvels
+                        <a href="{% url 'Purchases:manage_requisition_approval' %}" class="dropdown-item">
+                            Manage Requisition Approvals
                         </a>
-                        <a href="../Purchases/add_requisition_approval.html"
-                            class="dropdown-item">
-                            Add Requisition Approvels
+                        <a href="{% url 'Purchases:add_requisition_approval' %}" class="dropdown-item">
+                            Add Requisition Approvals
                         </a>
                     </div>
                 </div>
 
                 <!-- Requisition Approvel Action List -->
-                <a class="dropdown-item"
-                    href="../Purchases/requisition_approval_action_list.html">
-                    Requisition Approvel Action List
-                </a>
+                
+                <a class="dropdown-item 
+            {% if url_name in pages.requisitionapprovalactionlist %} active {%endif%}" 
+            href="{% url 'Purchases:requisition_approval_action_list' %}">
+            Requisition Approvel Action List
+        </a>
 
             </div>
         </div>
